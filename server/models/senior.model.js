@@ -9,13 +9,9 @@ var seniorSchema = new Schema({
   },
   position: {
     type: String,
-    required: false,
-  },
-  email: {
-    type: String,
     required: true
   },
-  gradYear: {
+  email: {
     type: String,
     required: false
   },
@@ -25,7 +21,23 @@ var seniorSchema = new Schema({
   },
   headshot: {
     type: String,
+    required: false
+  },
+  description: {
+    type: String,
     required: true
+  },
+  resume: {
+    type: String,
+    required: false
+  },
+  linkedin: {
+    type: String,
+    required: false
+  },
+  website: {
+    type: String,
+    required: false
   }
 });
 

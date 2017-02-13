@@ -5,8 +5,14 @@
 MainController.$inject = ['$scope', 'SeniorService'];
 
 function MainController($scope, SeniorService){
+  $scope.seniors = SeniorService.get();
   $scope.createSenior = createSenior;
 
+  $scope.$watch(function(){
+     return SeniorService.get();
+   }, function(){
+     $scope.seniors = SeniorService.get();
+   });
   function createSenior(newSenior){
     SeniorService.create(newSenior);
     $scope.newSenior = '';

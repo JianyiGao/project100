@@ -47,8 +47,29 @@ router.post('/seniors', function(req, res){
     });
   });
 });
-router.delete('/seniors/:name', function(req, res){
-
+router.put('/seniors/:id', function(req, res){
+  Senior.findOneAndUpdate({_id: req.params.id}, req.body, function(err, oldSenior){
+    if(err){
+      res.status(500).json({
+        err: err
+      });
+    }
+    res.status(200).json({
+      msg: oldSenior
+    });
+  });
+});
+router.delete('/seniors/:id', function(req, res){
+  Senior.findOneAndRemove({_id: req.params.id}, function(err, deletedSenior){
+    if(err){
+      res.status(500).json({
+        err: err
+      });
+    }
+    res.status(200).json({
+      msg: deletedSenior
+    });
+  });
 });
 
 module.exports = router;

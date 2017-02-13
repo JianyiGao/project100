@@ -8,17 +8,22 @@
     init();
     var seniors = [];
     return {
+      get: getAllSeniors,
       create: createOneSenior
     };
 
     function init(){ // this is going to make our first data request upon file load
       $http.get('/seniors')
             .then(function(response){
-              members = response.data.seniors;
+              seniors = response.data.seniors;
             })
             .catch(function(err){
               console.log(err);
             });
+    }
+  }
+    function getAllSeniors(){
+     return seniors;
     }
 
     function createOneSenior(senior){
@@ -30,5 +35,4 @@
             console.log(err);
           });
     }
-  }
 }());

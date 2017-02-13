@@ -63,7 +63,36 @@
               <div class="row">
                 <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
                   <h1>Project 100</h1>
+                  <div class="row text-center">
+                    <ul class="col-md-4 animate fadeIn team-box" ng-repeat="senior in seniors">
+                      <figure>
+                        <img ng-src="{{ senior.headshot }}" alt="senior-picture">
+                        <div class="member-details light">
+                          <!-- Name -->
+                          <h5 style="text-transform: none;">{{ senior.name }}</h5>
+                          <!-- Position -->
+                          <h3 style="text-transform: none;">{{ senior.position }}</h3>
+                          <!-- Strip -->
+                          <div class="strip"></div>
+                          <!-- Member Description -->
+                          <p class="normal">
+                            {{ senior.description }}
+                          </p>
+                          <!-- Socials -->
+                          <div class="socials">
+                            <!-- Social Link -->
+                            <a ng-href="{{ senior.linkedin }}">
+                              <i class="fa fa-linkedin"></i>
+                            </a>
+                          </div>
 
+
+                        </div>
+                      </figure>
+
+                    </div>
+
+                  </div>
                 </div>
 
               </div>
@@ -71,11 +100,6 @@
           </section>
         </main>
 
-        <div class="grid">
-          <div class="grid-item">Ayyy</div>
-          <div class="grid-item grid-item--width2">Yoooo</div>
-          <div class="grid-item">suppp</div>
-        </div>
 
 
         <footer>
