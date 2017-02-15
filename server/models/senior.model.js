@@ -35,10 +35,47 @@ var seniorSchema = new Schema({
     type: String,
     required: false
   },
-  website: {
+  personalSite1: {
+    type: String,
+    required: false
+  },
+  personalSite2: {
     type: String,
     required: false
   }
+  pillar: {
+    type: String,
+    required: false
+  },
+  availableDate: {
+    type: String,
+    required: false
+  },
+  fullTime: {
+    type: Boolean,
+    required: false
+  },
+  partTime: {
+    type: Boolean,
+    required: false
+  },
+  internship: {
+    type: Boolean,
+    required: false
+  },
+  isWorking: {
+    type: Boolean,
+    required: false
+  },
+  isAlumnus: {
+    type: Boolean,
+    required: false
+  },
+  isGraduating: {
+    type: Boolean,
+    required: false
+  }
+
 });
 
 var Senior = mongoose.model('Senior', seniorSchema);
