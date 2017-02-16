@@ -42,7 +42,7 @@ var seniorSchema = new Schema({
   personalSite2: {
     type: String,
     required: false
-  }
+  },
   pillar: {
     type: String,
     required: false
