@@ -19,6 +19,8 @@ header.mdl-layout__header .wordmark{height:2rem}.mdl-layout__header-row .mdl-nav
   background: -moz-linear-gradient(bottom right, #f1d5ab, #D46C62); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom right, #f1d5ab, #D46C62); /* Standard syntax */
 	height: 100vw;
+	width: 100vw;
+	z-index: 0;
 }
 
 h1, h5, h6 {
@@ -29,6 +31,7 @@ h1, h5, h6 {
 
 body {
 	padding-top: 64px; /* Alows us to place content below the fixed navbar */
+	
 }
 
 row {
@@ -37,7 +40,50 @@ row {
 }
 
 * {
-		color: white;
+	color: white;
 	font-family: 'Lato';
 	text-decoration: uppercase;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+	src: url('../fonts/fontawesome-webfont.eot?v=4.0.3');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+input[type="checkbox"] + span .label-text:before {
+	content:'poop';
+	font-family: 'FontAwesome';
+}
+
+/*input[type="checkbox"] + span.label-text:before {
+	content: "\f096";
+	font-family: "FontAwesome";
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+}
+	
+input[type="checkbox"] + span.label-text:after
+	content: "goodbye.";
+}*/
+
+#sidebar {
+	z-index:1;
+	margin: 0px !important;
+	width: 25vw; 
+	height: 100vw;
+	background-color: #58595B;
+	display:inline-block;
+	/*position: fixed*/
+}
+
+#card-view {
+	z-index:1;
+	margin: 0px !important;
+	width: 75vw;
+	height: 100vw;
+	display:inline-block;
+	float:right;
 }

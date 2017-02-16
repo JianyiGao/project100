@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="../css/socials.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700" type="text/css">
+			  		
     </head>
 
     <div ng-controller="MainController">
@@ -41,68 +42,77 @@
           <section id="background">
 
 						<!--SIDEBAR-->
-            <div id="sidebar" class="container-fluid text-center" style="margin: 0px !important; width: 25vw; height: 100vw; background-color: #58595B;"> <!--position: fixed;-->
+            <div id="sidebar" class="container-fluid text-center"> 
+							
 							<div class="row">
 								<div class="col-xs-12" style="padding-top: 10px; font-family: 'Lato';">
 									<h5>EMPLOYMENT INTEREST</h5>
-
-									<form>
-										<label class="checkbox-inline">
-											<input type="checkbox" name="FT">FULL-TIME
-										</label>
-										<label class="checkbox-inline">
-											<input type="checkbox" name="PT">PART-TIME
-										</label>
-										<label class="checkbox-inline">
-											<input type="checkbox" name="INTSHP">INTERNSHIP
-										</label>
+								
+							
+									<form role="form">										
+										
+											<input type="checkbox" id="FT">
+												<label for="FT"><span class="label-text">FULL-TIME</span></label>	
+											
+										
+											<input type="checkbox" id="PT">
+												<label for="PT"><span class="label-text">PART-TIME</span></label>
+										
+										
+											<input type="checkbox" id="INTSHP">												
+												<label for="INTSHP"><span class="label-text">INTERNSHIP</span></label>
+										
 									</form>
 								</div>
-
 							</div>
+							
+							<hr>
+							
 							<div class="row">
 								<div class="col-xs-12" style="padding-top: 30px;">
 									<h5>PILLAR</h5>
 
 									<form>
-										<label class="checkbox-inline">
+										<label class="checkbox-inline checkbox-primary">
 											<input type="checkbox" name="accounts">ACCOUNTS
 										</label>
-										<label class="checkbox-inline">
+										<label class="checkbox-inline checkbox-primary">
 											<input type="checkbox" name="research">RESEARCH
 										</label>
-										<label class="checkbox-inline">
+										<label class="checkbox-inline checkbox-primary">
 											<input type="checkbox" name="creative">CREATIVE
 										</label>
-										<label class="checkbox-inline">
+										<label class="checkbox-inline checkbox-primary">
 											<input type="checkbox" name="digital">DIGITAL
 										</label>
-										<label class="checkbox-inline">
+										<label class="checkbox-inline checkbox-primary">
 											<input type="checkbox" name="media">MEDIA
 										</label>
 									</form>
 
 								</div>
 							</div>
-
+						 
+							<hr>
+							
 							<div class="row">
 								<div class="col-xs-12" style="padding-top: 30px;">
 									<h5>TAGS</h5>
 
 									<form>
-										<label class="checkbox-inline">
+										<label class="checkbox-inline checkbox-primary">
 											<input type="checkbox" name="1">1
 										</label>
-										<label class="checkbox-inline">
+										<label class="checkbox-inline checkbox-primary">
 											<input type="checkbox" name="2">2
 										</label>
-										<label class="checkbox-inline">
+										<label class="checkbox-inline checkbox-primary">
 											<input type="checkbox" name="3">3
 										</label>
-										<label class="checkbox-inline">
+										<label class="checkbox-inline checkbox-primary">
 											<input type="checkbox" name="4">5
 										</label>
-										<label class="checkbox-inline">
+										<label class="checkbox-inline checkbox-primary">
 											<input type="checkbox" name="5">5
 										</label>
 									</form>
@@ -111,21 +121,22 @@
 
 							<div class="btn btn-primary" type="button" style="margin-top: 20px;">SEARCH
 							</div>
-
-
-                </div>
+            </div>
+				
 
 						<!--CARD VIEW-->
+					
+					<div id="card-view" class="container text-center">
             <div class="row text-center">
-              <div class="col-md-4 animate fadeIn team-box" ng-repeat="senior in seniors">
+              <div ng-repeat="senior in seniors">
                 <figure>
                   <img ng-src="{{ senior.headshot }}" alt="senior-picture">
 
-                  <div class="member-details light">
+                  <div>
                     <!-- Name -->
-                    <h5 style="text-transform: none;">{{ senior.name }}</h5>
+                    <h5>{{ senior.name }}</h5>
                     <!-- Position -->
-                    <h3 style="text-transform: none;">{{ senior.position }}</h3>
+                    <h3>{{ senior.position }}</h3>
                     <!-- Strip -->
                     <div class="strip"></div>
                     <!-- Member Description -->
@@ -140,14 +151,15 @@
                         <i class="fa fa-linkedin"></i>
                       </a>
                     </div>
-
-
                   </div>
+									
                 </figure>
 
               </div>
             </div>
-          </section>
+					</div>
+					</section>
+          
         </main>
 
         <footer>
@@ -163,10 +175,10 @@
 				<!---JAVASCRIPT LIBRARIES-->
         <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
-        <script src="js/app.js"></script>
-        <script src="js/controllers/main.controller.js"></script>
-        <script src="js/services/senior.service.js"></script>
-        <script src="../js/plugins.min.js"></script>
+        <script src="../js/app.js"></script>
+        <script src="../js/controllers/main.controller.js"></script>
+        <script src="../js/services/senior.service.js"></script>
+        <!--<script src="../js/plugins.min.js"></script> THIS CAN'T BE FOUND -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="../js/bootstrap.min.js"></script>
 
@@ -183,4 +195,5 @@
         </script>
 
     </body>
+	</div>
 </html>
