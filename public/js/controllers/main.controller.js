@@ -1,4 +1,4 @@
-(function() {
+(function () {
   angular.module('Project100')
         .controller('MainController', MainController);
 
