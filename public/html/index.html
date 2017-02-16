@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="../css/socials.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700" type="text/css">
-			  		
+
     </head>
 
     <div ng-controller="MainController">
@@ -42,32 +42,32 @@
           <section id="background">
 
 						<!--SIDEBAR-->
-            <div id="sidebar" class="container-fluid text-center"> 
-							
+            <div id="sidebar" class="container-fluid text-center">
+
 							<div class="row">
 								<div class="col-xs-12" style="padding-top: 10px; font-family: 'Lato';">
 									<h5>EMPLOYMENT INTEREST</h5>
-								
-							
-									<form role="form">										
-										
+
+
+									<form role="form">
+
 											<input type="checkbox" id="FT">
-												<label for="FT"><span class="label-text">FULL-TIME</span></label>	
-											
-										
+												<label for="FT"><span class="label-text">FULL-TIME</span></label>
+
+
 											<input type="checkbox" id="PT">
 												<label for="PT"><span class="label-text">PART-TIME</span></label>
-										
-										
-											<input type="checkbox" id="INTSHP">												
+
+
+											<input type="checkbox" id="INTSHP">
 												<label for="INTSHP"><span class="label-text">INTERNSHIP</span></label>
-										
+
 									</form>
 								</div>
 							</div>
-							
+
 							<hr>
-							
+
 							<div class="row">
 								<div class="col-xs-12" style="padding-top: 30px;">
 									<h5>PILLAR</h5>
@@ -92,9 +92,9 @@
 
 								</div>
 							</div>
-						 
+
 							<hr>
-							
+
 							<div class="row">
 								<div class="col-xs-12" style="padding-top: 30px;">
 									<h5>TAGS</h5>
@@ -122,19 +122,50 @@
 							<div class="btn btn-primary" type="button" style="margin-top: 20px;">SEARCH
 							</div>
             </div>
-				
+
 
 						<!--CARD VIEW-->
-					
+
 					<div id="card-view" class="container text-center">
             <div class="row text-center">
               <div ng-repeat="senior in seniors">
                 <figure>
-                  <img ng-src="{{ senior.headshot }}" alt="senior-picture">
+                  <img ng-src="{{ senior.headshot }}" alt="senior-picture" data-toggle="modal" data-target="#myModal">
+
+                  <!-- Info Modal -->
+                  <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                      <!-- Info Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title text-center">Sign Up for our Newsletter</h4>
+                        </div>
+                        <div class="modal-body text-center">
+                          <div class="form-group row">
+                            <div class="col-md-12">
+                              <label for="Full Name">Full Name: </label>
+                              <!-- Name -->
+                              <h5 ng-repeat="senior in seniors" style="color: black;">{{ senior.name }}</h5>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-md-12">
+                              <label for="Email Address" class="col-2 col-form-label">Email: </label>
+                              <input type="email" ng-model="newMember.email" name="Email Address" placeholder="satoshin21@ufl.edu">
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button ng-click="createMember(newMember)" type="button" class="btn btn-success" data-dismiss="modal">Submit</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
                   <div>
-                    <!-- Name -->
-                    <h5>{{ senior.name }}</h5>
+
                     <!-- Position -->
                     <h3>{{ senior.position }}</h3>
                     <!-- Strip -->
@@ -152,14 +183,14 @@
                       </a>
                     </div>
                   </div>
-									
+
                 </figure>
 
               </div>
             </div>
 					</div>
 					</section>
-          
+
         </main>
 
         <footer>
@@ -174,13 +205,14 @@
 
 				<!---JAVASCRIPT LIBRARIES-->
         <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+        <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="../js/app.js"></script>
         <script src="../js/controllers/main.controller.js"></script>
         <script src="../js/services/senior.service.js"></script>
         <!--<script src="../js/plugins.min.js"></script> THIS CAN'T BE FOUND -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
 
 				<script>
             jQuery(document).ready(function(){
