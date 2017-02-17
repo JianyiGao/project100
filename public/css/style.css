@@ -12,17 +12,6 @@ header.mdl-layout__header .wordmark{height:2rem}.mdl-layout__header-row .mdl-nav
 .grid-item { width: 200px !important; }
 .grid-item--width2 { width: 400px !important; }
 
-#background {
-  background: red; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left top, #f1d5ab, #D46C62); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right, #f1d5ab, #D46C62); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right, #f1d5ab, #D46C62); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right, #f1d5ab, #D46C62); /* Standard syntax */
-	height: 100vw;
-	width: 100vw;
-	z-index: 0;
-}
-
 h1, h5, h6 {
 	color: white;
 	font-family: 'Lato';
@@ -31,7 +20,11 @@ h1, h5, h6 {
 
 body {
 	padding-top: 64px; /* Alows us to place content below the fixed navbar */
-	
+	background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #f1d5ab, #D46C62); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #f1d5ab, #D46C62); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #f1d5ab, #D46C62); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #f1d5ab, #D46C62); /* Standard syntax */
 }
 
 row {
@@ -72,18 +65,83 @@ input[type="checkbox"] + span.label-text:after
 #sidebar {
 	z-index:1;
 	margin: 0px !important;
-	width: 25vw; 
+	width: 13vw; 
 	height: 100vw;
 	background-color: #58595B;
 	display:inline-block;
+	font-size: 10px;
+	float: left;
 	/*position: fixed*/
+}
+
+#welcome-view {
+	width: 85vw;
+	height: auto;
+	z-index:1;
+	display:inline-block;
+	float:right;
+	color: black;
+	margin-top: 20px;
 }
 
 #card-view {
 	z-index:1;
 	margin: 0px !important;
-	width: 75vw;
-	height: 100vw;
+	width: 81vw;
+	height: 80vw;
 	display:inline-block;
 	float:right;
+}
+
+#filter-copy, #heading, #alumni-button, #pillar, #tags {
+	background: -webkit-linear-gradient(left top, #f1d5ab, #D46C62);
+	background: -o-linear-gradient(left top, #f1d5ab, #D46C62); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left top, #f1d5ab, #D46C62); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to left top, #f1d5ab, #D46C62); /* Standard syntax */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+	font-weight: bold;
+	display: inline-block;
+}
+
+#filter-copy {
+	font-size: 15px;
+}
+
+#alumni-button {
+	
+}
+
+#heading {
+	margin-top: 0px;
+}
+
+label {
+	text-align: left;
+	margin-left: 40px;
+}
+
+.label-text {
+	font-size: 12px;
+	display: inline-block;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
+input[type="checkbox"] + .label-text:before {
+	content: "\f096";
+	font-family: "FontAwesome";
+	display: inline-block;
+}
+
+input[type="checkbox"]:checked + .label-text:before {
+	content: "\f14a";
+	font-family: "FontAwesome";
+	display: inline-block;
+}
+
+#pillar {
+	padding-bottom: 10px;
 }
