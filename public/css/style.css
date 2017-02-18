@@ -118,7 +118,10 @@ input[type="checkbox"] + span.label-text:after
 
 label {
 	text-align: left;
-	margin-left: 40px;
+}
+
+.move-over {
+	margin-left: 25%;
 }
 
 .tag-text {
@@ -132,6 +135,7 @@ label {
 
 input[type="checkbox"] {
 	display: none;
+	float: left;
 }
 
 input[type="checkbox"] + .label-text:before {
@@ -148,4 +152,12 @@ input[type="checkbox"]:checked + .label-text:before {
 
 #pillar {
 	padding-bottom: 10px;
+}
+
+.checkbox-placement {
+	display: inline-block;
+}
+
+.checkbox-placement label{
+	float: left;
 }
