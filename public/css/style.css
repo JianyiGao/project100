@@ -121,6 +121,10 @@ label {
 	margin-left: 40px;
 }
 
+.tag-text {
+	margin-left: 10px;
+}
+
 .label-text {
 	font-size: 12px;
 	display: inline-block;
