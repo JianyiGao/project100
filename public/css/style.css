@@ -71,7 +71,8 @@ input[type="checkbox"] + span.label-text:after
 	display:inline-block;
 	font-size: 10px;
 	float: left;
-	/*position: fixed*/
+	position: fixed;
+	top: 50px;
 }
 
 #welcome-view {
