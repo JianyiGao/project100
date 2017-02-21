@@ -52,23 +52,24 @@
 
 							<div class="row">
 								<div class="col-xs-12" style="padding-top: 20px;">
-									<h5 id="pillar">PILLAR</h5>
-
+									<h5 id="pillar">DEPARTMENTS</h5>
+									
+									
 									<form>
 										<label class="checkbox move-over">
-											<input type="checkbox" name="accounts"><span class="label-text"> ACCOUNTS</span>
+											<input type="checkbox" id="accounts" name="accounts"><span class="label-text"> ACCOUNTS</span>
 										</label>
 										<label class="checkbox move-over">
-											<input type="checkbox" name="research"><span class="label-text"> RESEARCH</span>
+											<input type="checkbox" id="research" name="research"><span class="label-text"> RESEARCH</span>
 										</label>
 										<label class="checkbox move-over">
-											<input type="checkbox" name="creative"><span class="label-text"> CREATIVE</span>
+											<input type="checkbox" id="creative" name="creative"><span class="label-text"> CREATIVE</span>
 										</label>
 										<label class="checkbox move-over">
-											<input type="checkbox" name="digital"><span class="label-text"> DIGITAL</span>
+											<input type="checkbox" id="digital" name="digital"><span class="label-text"> DIGITAL</span>
 										</label>
 										<label class="checkbox move-over">
-											<input type="checkbox" name="media"><span class="label-text"> MEDIA</span>
+											<input type="checkbox" id="media" name="media"><span class="label-text"> MEDIA</span>
 										</label>
 									</form>
 
@@ -84,34 +85,35 @@
 							</div>
 							
 									<form>
-										
-										<div class="row">
+										<div id="account-tags">
+											<div class="row">
 											
-										<div class="col-xs-6 checkbox-placement">
-										<label class="checkbox">
-											<input type="checkbox" name="1"><span class="label-text"> 1</span>
-										</label>
-										</div>
-										
-										<div class="col-xs-6 checkbox-placement">
-										<label class="checkbox">
-											<input type="checkbox" name="2"><span class="label-text"> 2</span>
-										</label>
-										</div>
-											
-										</div>
+											<div class="col-xs-6 checkbox-placement">
+											<label class="checkbox">
+												<input type="checkbox" name="roject management"><span class="label-text"> Project Management</span>
+											</label>
+											</div>
+
+											<div class="col-xs-6 checkbox-placement">
+											<label class="checkbox">
+												<input type="checkbox" name="time management"><span class="label-text"> Time Management</span>
+											</label>
+											</div>
+
+											</div>
+										</div>																			
 																				
 										<div class="row">
 											
 										<div class="col-xs-6 checkbox-placement">
 										<label class="checkbox">
-											<input type="checkbox" name="3"><span class="label-text"> 3</span>
+											<input type="checkbox" name="report writing"><span class="label-text"> Report Writing</span>
 										</label>
 										</div>
 										
 										<div class="col-xs-6 checkbox-placement">
 										<label class="checkbox">
-											<input type="checkbox" name="4"><span class="label-text"> 4</span>
+											<input type="checkbox" name="4"><span class="label-text"> </span>
 										</label>
 										</div>
 											
@@ -128,8 +130,7 @@
 										</div>
 									</form>
 							
-							<div class="btn btn-primary" type="button" style="margin-top: 20px;">SEARCH
-							</div> 
+<!--							Removed Search button to make the site more user-friendly-->
 								
 							</div>
 
@@ -192,28 +193,27 @@
                     </div>
                   </div>
 
-<!--                  <div>-->
-
+                 <div>
                     <!-- Position -->
-<!--                   <h3>{{ senior.position }}</h3>-->
+                  	<h3>{{ senior.position }}</h3>
                     <!-- Strip -->
-<!--                   <div class="strip"></div>-->
+                  	<div class="strip"></div>
                     <!-- Member Description  -->
-<!--
+
                     <p class="normal">
                       {{ senior.description }}
                     </p>
--->
+
 
                     <!-- Socials -->
-<!--
                     <div class="socials">
                        Social Link 
                       <a ng-href="{{ senior.linkedin }}">
                         <i class="fa fa-linkedin"></i>
                       </a>
-                    </div>
-                  </div>-->
+                   </div>
+                 
+								</div>
 
 
                 </figure>
@@ -245,19 +245,6 @@
         <script src="../js/app.js"></script>
         <script src="../js/controllers/main.controller.js"></script>
         <script src="../js/services/senior.service.js"></script>
-        <!--<script src="../js/plugins.min.js"></script> THIS CAN'T BE FOUND -->
-
-				<script>
-            jQuery(document).ready(function(){
-                $("#accordion").accordion();
-            });
-
-            jQuery(document).ready(function(){
-                $("#admin").click(function(){
-                    $(this).next.slideToggle("slow");
-                })
-            });
-        </script>
 
     </body>
 	</div>
