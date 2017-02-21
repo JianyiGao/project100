@@ -57,7 +57,7 @@ input[type="checkbox"] + span .label-text:before {
 	speak: none;
 	-webkit-font-smoothing: antialiased;
 }
-	
+
 input[type="checkbox"] + span.label-text:after
 	content: "goodbye.";
 }*/
@@ -65,7 +65,7 @@ input[type="checkbox"] + span.label-text:after
 #sidebar {
 	z-index:1;
 	margin: 0px !important;
-	width: 13vw; 
+	width: 13vw;
 	height: 100vw;
 	background-color: #58595B;
 	display:inline-block;
@@ -110,7 +110,7 @@ input[type="checkbox"] + span.label-text:after
 }
 
 #alumni-button {
-	
+
 }
 
 #heading {
@@ -161,4 +161,14 @@ input[type="checkbox"]:checked + .label-text:before {
 
 .checkbox-placement label{
 	float: left;
+}
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
 }
