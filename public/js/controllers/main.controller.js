@@ -30,7 +30,6 @@ function MainController($scope, SeniorService){
     SeniorService.update(index, senior);
     senior.isBeingEdited = false;
   }
-
   // $('.grid').masonry({
   //   // options
   //   itemSelector: '.grid-item',
@@ -38,6 +37,7 @@ function MainController($scope, SeniorService){
   // });
 
 
-}
+
+  }
 
 }());

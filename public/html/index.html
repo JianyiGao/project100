@@ -53,11 +53,11 @@
 							<div class="row">
 								<div class="col-xs-12" style="padding-top: 20px;">
 									<h5 id="pillar">DEPARTMENTS</h5>
-									
-									
+
+
 									<form>
 										<label class="checkbox move-over">
-											<input type="checkbox" id="accounts" name="accounts"><span class="label-text"> ACCOUNTS</span>
+											<input type="checkbox" id="accounts" name="accounts" ng-model="senior.filter[pillar]"><span class="label-text"> ACCOUNTS</span>
 										</label>
 										<label class="checkbox move-over">
 											<input type="checkbox" id="research" name="research"><span class="label-text"> RESEARCH</span>
@@ -88,7 +88,7 @@
 
 										<div id="account-tags">
 											<div class="row">
-											
+
 											<div class="col-xs-6 checkbox-placement">
 											<label class="checkbox">
 												<input type="checkbox" name="roject management"><span class="label-text"> Project Management</span>
@@ -102,8 +102,8 @@
 											</div>
 
 											</div>
-										</div>																			
-																				
+										</div>
+
 
 										<div class="row">
 
@@ -132,7 +132,7 @@
 										</div>
 									</form>
 
-							
+
 <!--							Removed Search button to make the site more user-friendly
 									<div class="btn btn-primary" type="button" style="margin-top: 20px;">SEARCH</div>-->
 
@@ -157,8 +157,8 @@
 				<section>
 
 					<div id="card-view" class="container text-center">
-            <div class="row  text-center">
-              <div class="no-gutters" ng-repeat="senior in seniors">
+            <div class="row text-center">
+              <div class="no-gutters" ng-repeat="senior in (seniors | filter:senior.filterByPillar) as filteredSeniors">
                 <figure>
                   <img ng-src="{{ senior.headshot }}" width="300px" height="300px" alt="senior-picture" data-toggle="modal" data-target="#myModal">
 
@@ -206,7 +206,7 @@
                         <i class="fa fa-linkedin"></i>
                       </a>
                    </div>
-                 
+
 								</div>
 
 
