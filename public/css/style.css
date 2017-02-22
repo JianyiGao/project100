@@ -66,12 +66,12 @@ input[type="checkbox"] + span.label-text:after
 	z-index:1;
 	margin: 0px !important;
 	width: 13vw;
-	height: 100vw;
+	height: 1800px;
 	background-color: #58595B;
 	display:inline-block;
 	font-size: 10px;
 	float: left;
-	position: fixed;
+/*	position: fixed;*/
 	top: 50px;
 }
 
@@ -89,7 +89,7 @@ input[type="checkbox"] + span.label-text:after
 	z-index:1;
 	margin: 0px !important;
 	width: 81vw;
-	height: 80vw;
+	height: 100vw;
 	display:inline-block;
 	float:right;
 }
@@ -119,6 +119,7 @@ input[type="checkbox"] + span.label-text:after
 
 label {
 	text-align: left;
+	padding: 5px;
 }
 
 .move-over {
@@ -157,6 +158,7 @@ input[type="checkbox"]:checked + .label-text:before {
 
 .checkbox-placement {
 	display: inline-block;
+	display: none;
 }
 
 .checkbox-placement label{
@@ -172,3 +174,5 @@ input[type="checkbox"]:checked + .label-text:before {
   padding-right: 0;
   padding-left: 0;
 }
+
+
