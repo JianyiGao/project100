@@ -43,7 +43,7 @@
 
 
 						<!--SIDEBAR-->
-				<section>
+				<section ng-controller="FilterCtrl as ctrl">
             <div id="sidebar" class="container-fluid text-center">
 
 							<p style="margin-top: 30px;"><span id="filter-copy">Find the right fit for your team</span></p>
@@ -55,9 +55,9 @@
 									<h5 id="pillar">DEPARTMENTS</h5>
 
 
-									<form>
+									<form ng-repeat="pillar in ctrl.getPillars()">
 										<label class="checkbox move-over">
-											<input type="checkbox" id="accounts" name="accounts" ng-model="senior.filter[pillar]"><span class="label-text"> ACCOUNTS</span>
+											<input type="checkbox" id="accounts" name="accounts" ng-model="ctrl.filter[accounts]"><span class="label-text"> {{senior.pillar}}</span>
 										</label>
 										<label class="checkbox move-over">
 											<input type="checkbox" id="research" name="research"><span class="label-text"> RESEARCH</span>
@@ -154,13 +154,13 @@
 
 
 						<!--CARD VIEW-->
-				<section>
+				<section ng-controller="FilterCtrl as ctrl">
 
 					<div id="card-view" class="container text-center">
             <div class="row text-center">
-              <div class="no-gutters" ng-repeat="senior in (seniors | filter:senior.filterByPillar) as filteredSeniors">
+              <div class="no-gutters" ng-repeat="senior in seniors | filter:senior.filterByPillar">
                 <figure>
-                  <img ng-src="{{ senior.headshot }}" width="300px" height="300px" alt="senior-picture" data-toggle="modal" data-target="#myModal">
+                  <img ng-model="senior.filter[pillar]" ng-src="{{ senior.headshot }}" width="300px" height="300px" alt="senior-picture" data-toggle="modal" data-target="#myModal">
 
                   <!-- Info Modal -->
                   <div id="myModal" class="modal fade" role="dialog">
@@ -186,20 +186,20 @@
                       </div>
                     </div>
                   </div>
-
+  <!--
                  <div>
-                    <!-- Position -->
+                    Position
                   	<h3>{{ senior.position }}</h3>
-                    <!-- Strip -->
+                    Strip
                   	<div class="strip"></div>
-                    <!-- Member Description  -->
+                    Member Description
 
                     <p class="normal">
                       {{ senior.description }}
                     </p>
 
 
-                    <!-- Socials -->
+                    Socials
                     <div class="socials">
                        Social Link
                       <a ng-href="{{ senior.linkedin }}">
@@ -207,7 +207,7 @@
                       </a>
                    </div>
 
-								</div>
+								</div> -->
 
 
                 </figure>
@@ -238,6 +238,7 @@
         <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="../js/app.js"></script>
         <script src="../js/controllers/main.controller.js"></script>
+        <script src="../js/controllers/filter.controller.js"></script>
         <script src="../js/services/senior.service.js"></script>
 
     </body>
