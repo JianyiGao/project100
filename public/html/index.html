@@ -53,11 +53,12 @@
 							<div class="row">
 								<div class="col-xs-12" style="padding-top: 20px;">
 									<h5 id="pillar">DEPARTMENTS</h5>
+
 									<hr>
 									
 									<form>
 										<label class="checkbox move-over">
-											<input type="checkbox" id="accounts" name="accounts"><span class="label-text"> ACCOUNTS</span>
+											<input type="checkbox" id="accounts" name="accounts" ng-model="senior.filter[pillar]"><span class="label-text"> ACCOUNTS</span>
 										</label>
 										
 <!--									ACCOUNT TAGS-->
@@ -65,6 +66,7 @@
 										<form >																																																																		
 
 										<div class="row">
+
 
 											<div class="col-xs-6 checkbox-placement account-tags">
 											<label class="checkbox">
@@ -78,7 +80,9 @@
 											</label>
 											</div>
 
+
 										</div>
+
 
 										<div class="row">
 
@@ -647,6 +651,7 @@
 										</label>
 -->
 									</form>
+
 								</div>
 							</div>																
 					</div>
@@ -670,8 +675,8 @@
 				<section>
 
 					<div id="card-view" class="container text-center">
-            <div class="row no-gutters text-center">
-              <div ng-repeat="senior in seniors">
+            <div class="row text-center">
+              <div class="no-gutters" ng-repeat="senior in (seniors | filter:senior.filterByPillar) as filteredSeniors">
                 <figure>
                   <img ng-src="{{ senior.headshot }}" width="300px" height="300px" alt="senior-picture" data-toggle="modal" data-target="#myModal">
 
@@ -719,7 +724,7 @@
                         <i class="fa fa-linkedin"></i>
                       </a>
                    </div>
-                 
+
 								</div>
 
 
