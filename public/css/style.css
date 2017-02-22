@@ -66,17 +66,18 @@ input[type="checkbox"] + span.label-text:after
 	z-index:1;
 	margin: 0px !important;
 	width: 13vw;
-	height: 100vw;
+	height: 1800px;
 	background-color: #58595B;
 	display:inline-block;
 	font-size: 10px;
 	float: left;
-	position: fixed;
+/*	position: fixed;*/
 	top: 50px;
 }
 
 #welcome-view {
-	width: 85vw;
+	width: auto;
+	max-width: 85vw;
 	height: auto;
 	z-index:1;
 	display:inline-block;
@@ -87,14 +88,15 @@ input[type="checkbox"] + span.label-text:after
 
 #card-view {
 	z-index:1;
-	margin: 0px !important;
-	width: 81vw;
-	height: 100vw;
+	margin-right: 0 !important;
+	width: auto;
+	max-width: 81vw;
+	height: auto;
 	display:inline-block;
 	float:right;
 }
 
-#filter-copy, #heading, #alumni-button, #pillar, #tags {
+#filter-copy, #heading, #alumni-button, #departments, #tags {
 	background: -webkit-linear-gradient(left top, #f1d5ab, #D46C62);
 	background: -o-linear-gradient(left top, #f1d5ab, #D46C62); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(left top, #f1d5ab, #D46C62); /* For Firefox 3.6 to 15 */
@@ -119,6 +121,7 @@ input[type="checkbox"] + span.label-text:after
 
 label {
 	text-align: left;
+	padding: 5px;
 }
 
 .move-over {
@@ -151,30 +154,55 @@ input[type="checkbox"]:checked + .label-text:before {
 	display: inline-block;
 }
 
-#pillar {
+#departments {
 	padding-bottom: 10px;
+	font-size: 1.2vw;
 }
 
 .checkbox-placement {
 	display: inline-block;
+	display: none;
 }
 
 .checkbox-placement label{
 	float: left;
 }
 
-.row.no-gutters {
+.no-gutters {
   margin-right: 0;
   margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
-.row.no-gutters > [class^="col-"],
-.row.no-gutters > [class*=" col-"] {
-  padding-right: 0;
-  padding-left: 0;
+
+.container img{
+  width: 100%;
+  height: auto;
+}
+@supports(object-fit: cover){
+    .container img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
 }
 
 img {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+	opacity: 0.8;
+}
+
+.move-up {
+	margin-top: -10px;
+}
+
+img:hover {
+	border: white 5px solid;
+	opacity: 1.0;
+	-webkit-transition: opacity 2s; /* Chrome Safari */
+	-moz-transition: opacity 2s; /* Mozilla */
+	-o-transition: opacity 2s; /* Opera */
 }

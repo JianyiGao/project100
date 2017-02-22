@@ -7,23 +7,27 @@
 
 /* SHOW/HIDE TAGS*/
 $(document).ready(function(){
-	$("#accounts").click(function(){
-    $("account-tags").show();
+	$('#accounts').click(function() {
+    $(".account-tags").toggle(this.checked);
 	});
-	
-	$("#research").click(function(){
-    $("p").show();
+
+	$('#research').click(function() {
+    $(".research-tags").toggle(this.checked);
 	});
-	
-	$("#creative").click(function(){
-    $("p").show();
+
+	$('#creative').click(function() {
+    $(".creative-tags").toggle(this.checked);
 	});
-	
-	$("#digital").click(function(){
-    $("p").show();
+
+	$('#digital').click(function() {
+    $(".digital-tags").toggle(this.checked);
 	});
-	
-	$("#media").click(function(){
-    $("p").show();
+
+	$('#media').click(function() {
+    $(".media-tags").toggle(this.checked);
+	});
+
+	$('#admin').click(function() {
+    $(".admin-tags").toggle(this.checked);
 	});
 });
