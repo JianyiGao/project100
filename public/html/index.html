@@ -52,7 +52,7 @@
 
 							<div class="row">
 								<div class="col-xs-12" style="padding-top: 20px;">
-									<h5 id="pillar">DEPARTMENTS</h5>
+									<h5 id="departments">DEPARTMENTS</h5>
 
 									<hr>
 									
@@ -675,10 +675,10 @@
 				<section>
 
 					<div id="card-view" class="container text-center">
-            <div class="row text-center">
-              <div class="no-gutters" ng-repeat="senior in (seniors | filter:senior.filterByPillar) as filteredSeniors">
+            <div class="row no-gutters">
+              <div class="col-xs-6 col-sm-3" style="height: auto;" ng-repeat="senior in (seniors | filter:senior.filterByPillar) as filteredSeniors">
                 <figure>
-                  <img ng-src="{{ senior.headshot }}" width="300px" height="300px" alt="senior-picture" data-toggle="modal" data-target="#myModal">
+                  <img class="img-responsive" ng-src="{{ senior.headshot }}" width="300px" height="auto;" alt="senior-picture" data-toggle="modal" data-target="#myModal" />
 
                   <!-- Info Modal -->
                   <div id="myModal" class="modal fade" role="dialog">
@@ -705,19 +705,22 @@
                     </div>
                   </div>
 
-                 <div>
+<!--                 <div>-->
                     <!-- Position -->
-                  	<h3>{{ senior.position }}</h3>
+<!--                  	<h3>{{ senior.position }}</h3>-->
                     <!-- Strip -->
-                  	<div class="strip"></div>
+<!--                  	<div class="strip"></div>-->
                     <!-- Member Description  -->
 
+<!--
                     <p class="normal">
                       {{ senior.description }}
                     </p>
+-->
 
 
                     <!-- Socials -->
+<!--
                     <div class="socials">
                        Social Link
                       <a ng-href="{{ senior.linkedin }}">
@@ -726,6 +729,7 @@
                    </div>
 
 								</div>
+-->
 
 
                 </figure>
