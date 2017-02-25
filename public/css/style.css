@@ -27,6 +27,16 @@ body {
   background: linear-gradient(to bottom right, #f1d5ab, #D46C62); /* Standard syntax */
 }
 
+.nav-item {
+	font-size: 16px;
+}
+
+.nav-item a{
+	font-size: 11.2px !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	
+}
+
 row {
 	padding-top: 10p !important;
 	margin-top: 10px;
@@ -96,7 +106,7 @@ input[type="checkbox"] + span.label-text:after
 	float:right;
 }
 
-#filter-copy, #heading, #alumni-button, #departments, #tags {
+#filter-copy, #alumni-button, #departments, #tags {
 	background: -webkit-linear-gradient(left top, #f1d5ab, #D46C62);
 	background: -o-linear-gradient(left top, #f1d5ab, #D46C62); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(left top, #f1d5ab, #D46C62); /* For Firefox 3.6 to 15 */
