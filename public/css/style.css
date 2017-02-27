@@ -74,39 +74,26 @@ input[type="checkbox"] + span.label-text:after
 
 #sidebar {
 	z-index:1;
-	margin: 0px !important;
-	width: 13vw;
-	height: 1800px;
+	width: 100vw;
+	height: 400px;
 	background-color: #58595B;
-	display:inline-block;
+	display: block;
 	font-size: 10px;
-	float: left;
-/*	position: fixed;*/
-	top: 50px;
 }
 
 #welcome-view {
-	width: auto;
-	max-width: 85vw;
-	height: auto;
 	z-index:1;
 	display:inline-block;
-	float:right;
 	color: black;
 	margin-top: 20px;
+	display: block;
 }
 
 #card-view {
-	z-index:1;
-	margin-right: 0 !important;
-	width: auto;
-	max-width: 81vw;
-	height: auto;
-	display:inline-block;
-	float:right;
+
 }
 
-#filter-copy, #alumni-button, #departments, #tags {
+#filter-copy, #alumni-button, #tags {
 	background: -webkit-linear-gradient(left top, #f1d5ab, #D46C62);
 	background: -o-linear-gradient(left top, #f1d5ab, #D46C62); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(left top, #f1d5ab, #D46C62); /* For Firefox 3.6 to 15 */
@@ -132,10 +119,6 @@ input[type="checkbox"] + span.label-text:after
 label {
 	text-align: left;
 	padding: 5px;
-}
-
-.move-over {
-	margin-left: 25%;
 }
 
 .tag-text {
@@ -166,7 +149,7 @@ input[type="checkbox"]:checked + .label-text:before {
 
 #departments {
 	padding-bottom: 10px;
-	font-size: 1.2vw;
+	color: black;
 }
 
 .checkbox-placement {
@@ -176,6 +159,10 @@ input[type="checkbox"]:checked + .label-text:before {
 
 .checkbox-placement label{
 	float: left;
+}
+
+label {
+	margin-bottom: 0px !important;
 }
 
 .no-gutters {
