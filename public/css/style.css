@@ -14,17 +14,12 @@ header.mdl-layout__header .wordmark{height:2rem}.mdl-layout__header-row .mdl-nav
 
 h1, h5, h6 {
 	color: white;
-	font-family: 'Lato';
-	text-decoration: uppercase;
+	text-transform: uppercase;
 }
 
 body {
-	padding-top: 64px; /* Alows us to place content below the fixed navbar */
-	background: red; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left top, #f1d5ab, #D46C62); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right, #f1d5ab, #D46C62); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right, #f1d5ab, #D46C62); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right, #f1d5ab, #D46C62); /* Standard syntax */
+	padding-top: 54px; /* Alows us to place content below the fixed navbar */
+	font-family: 'Lato';
 }
 
 .nav-item {
@@ -61,64 +56,42 @@ input[type="checkbox"] + span .label-text:before {
 	font-family: 'FontAwesome';
 }
 
-/*input[type="checkbox"] + span.label-text:before {
-	content: "\f096";
-	font-family: "FontAwesome";
-	speak: none;
-	-webkit-font-smoothing: antialiased;
-}
-
-input[type="checkbox"] + span.label-text:after
-	content: "goodbye.";
-}*/
-
-#sidebar {
-	z-index:1;
-	width: 100vw;
-	height: 400px;
-	background-color: #58595B;
-	display: block;
-	font-size: 10px;
-}
-
 #welcome-view {
-	z-index:1;
 	display:inline-block;
-	color: black;
-	margin-top: 20px;
+	color: white;
 	display: block;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+p {
+	color: white;
+	font-size: 15px;
+	padding-right: 5px;
+	margin-bottom: 0px;
+}
+
+strong {
+	color: white;
+	font-size: 18px;
 }
 
 #card-view {
-
+	padding-top: 40px;
 }
 
 #filter-copy, #alumni-button, #tags {
-	background: -webkit-linear-gradient(left top, #f1d5ab, #D46C62);
-	background: -o-linear-gradient(left top, #f1d5ab, #D46C62); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(left top, #f1d5ab, #D46C62); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to left top, #f1d5ab, #D46C62); /* Standard syntax */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 	font-weight: bold;
 	display: inline-block;
 }
 
-#filter-copy {
-	font-size: 15px;
-}
-
-#alumni-button {
-
-}
-
-#heading {
-	margin-top: 0px;
-}
 
 label {
 	text-align: left;
 	padding: 5px;
+	display: inline-block !important;
 }
 
 .tag-text {
@@ -127,6 +100,7 @@ label {
 
 .label-text {
 	font-size: 12px;
+	color: black;
 	display: inline-block;
 }
 
@@ -196,7 +170,7 @@ img {
 	margin-top: -10px;
 }
 
-img:hover {
+.bg-blue img:hover {
 	border: white 5px solid;
 	opacity: 1.0;
 	-webkit-transition: opacity 2s; /* Chrome Safari */
