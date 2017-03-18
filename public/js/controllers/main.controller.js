@@ -10,6 +10,7 @@ function MainController($scope, SeniorService){
   $scope.deleteSenior = deleteSenior;
   $scope.editSenior = editSenior;
   $scope.saveSenior = saveSenior;
+  
 
   $scope.$watch(function(){
      return SeniorService.get();
@@ -30,6 +31,11 @@ function MainController($scope, SeniorService){
     SeniorService.update(index, senior);
     senior.isBeingEdited = false;
   }
+  // function ability to select current senior
+  function selectSenior(senior) {
+    $scope.seniors = senior;
+  }
+
   // $('.grid').masonry({
   //   // options
   //   itemSelector: '.grid-item',
