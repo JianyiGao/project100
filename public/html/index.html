@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700" type="text/css">
 			  <link rel="stylesheet" type="text/css" href="../css/style.css">
-
+        <script src="https://use.fontawesome.com/8f3cfed809.js"></script>
     </head>
 
     <div ng-controller="MainController">
@@ -468,7 +468,8 @@
 												</label>
 												</div>
 
-														<div class="col-xs-6 checkbox-placement media-tags">
+
+												<div class="col-xs-6 checkbox-placement media-tags">
 												<label class="checkbox">
 													<input type="checkbox" name="pitch-writing"><span class="label-text"> Pitch Writing</span>
 												</label>
@@ -499,76 +500,32 @@
 
 			</section>
 
+			<!--CARD VIEW-->
 			<main>
-
-<!-- ng-repeat="senior in (seniors | filter:senior.filterByPillar) as filteredSeniors" -->
-
-				<!--CARD VIEW-->
 				<section class="bg-blue">
 					<div id="card-view" class="container text-center">
             <div class="row no-gutters">
-              <div class="col-xs-6 col-sm-3" style="height: auto;" ng-repeat="senior in seniors">
-                <figure>
-                  <img class="img-responsive" ng-src="{{ senior.headshot }}" width="300px" height="auto;" alt="senior-picture" data-toggle="modal" data-target="#myModal"/>
+              <div class="col-xs-6 col-sm-3 animate fadeIn team-box" style="height: auto;" ng-repeat="senior in (seniors | filter:senior.filterByPillar) as filteredSeniors">
+								<div class="wrapper">
+									<span class="member-details">
+										<h5>{{ senior.name }}</h5>
+										<h3>{{ senior.position }}</h3>
+										<div class="strip"></div>
+                    <p class='desc'>{{ senior.description }}</p>
+                    <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-globe fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-youtube-square fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-download fa-2x" aria-hidden="true"></i>
 
-                  <!-- Info Modal -->
-                  <div id="myModal" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
-                      <!-- Info Modal content-->
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal">&times;</button>
-                          <h4 class="modal-title text-center">Sign Up for our Newsletter</h4>
-                        </div>
-                        <div class="modal-body text-center">
-                          <div class="form-group row">
-                            <div class="col-md-12">
-                              <label for="Full Name">Full Name: </label>
-                              <!-- Name -->
-                              <h5 style="color: black;">{{ senior.name }}</h5>
-                            </div>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-<!--                 <div>-->
-                    <!-- Position -->
-<!--                  	<h3>{{ senior.position }}</h3>-->
-                    <!-- Strip -->
-<!--                  	<div class="strip"></div>-->
-                    <!-- Member Description  -->
-
-<!--
-                    <p class="normal">
-                      {{ senior.description }}
-                    </p>
--->
-
-
-                    <!-- Socials -->
-<!--
-                    <div class="socials">
-                       Social Link
-                      <a ng-href="{{ senior.linkedin }}">
-                        <i class="fa fa-linkedin"></i>
-                      </a>
-                   </div>
-
+									</span>
+									<img class="img-responsive senior" ng-src="{{ senior.headshot }}" width="300px" height="auto;" alt="senior-picture" data-toggle="modal" data-target="#myModal" />
 								</div>
--->
+               </div>
 
-
-                </figure>
-
-              </div>
-            </div>
-					</div>
-
+						</div>
+           </div>
 				</section>
 
   	</main>
