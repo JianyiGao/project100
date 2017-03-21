@@ -7,6 +7,7 @@
   function SeniorService($http){
     init();
     var seniors = [];
+
     return {
       get: getAllSeniors,
       create: createOneSenior,
@@ -23,6 +24,12 @@
         console.log(err);
       });
     }
+
+    // // function ability to select current senior
+    // function selectSenior(senior) {
+    //   this.senior = senior;
+    // }
+
     function getAllSeniors(){
       return seniors;
     }
@@ -36,6 +43,7 @@
         console.log(err);
       });
     }
+
     function updateOneSenior(index, updatedSenior){
       $http.put('/seniors/', updatedSenior._id, updatedSenior)
             .then(function(response){
