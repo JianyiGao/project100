@@ -164,6 +164,7 @@ label {
 
 img {
 	opacity: 0.8;
+	z-index: 1;
 }
 
 .move-up {
@@ -176,4 +177,41 @@ img {
 	-webkit-transition: opacity 2s; /* Chrome Safari */
 	-moz-transition: opacity 2s; /* Mozilla */
 	-o-transition: opacity 2s; /* Opera */
+}
+
+.wrapper {
+	position: relative;
+	padding: 0;
+}
+
+.member-details{
+	  position: absolute;
+	  top: 0px;
+    width: 285px;
+    height: 285px;    
+		line-height: 100px;
+	  left: 0 !important;
+	  right: 0 !important;
+    background-color:rgba(0,0,0,0.65);
+	  opacity: 0;
+    text-align: left;
+    padding:20px;
+    cursor: default;
+		z-index: 2;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.member-details:hover { 
+	opacity: 1;
+}
+
+.member-details .strip{
+		width: 100%;
+		margin-top: 0.2rem;
+		margin-bottom:0.2rem;
+		height: 1px;
+		background-color:rgba(255,255,255,0.1);
 }

@@ -29,5 +29,6 @@ $(document).ready(function(){
 	
 	$('#admin').click(function() {
     $(".admin-tags").toggle(this.checked);
-	});
+	});		
+	
 });
