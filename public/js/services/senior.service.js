@@ -25,11 +25,6 @@
       });
     }
 
-    // // function ability to select current senior
-    // function selectSenior(senior) {
-    //   this.senior = senior;
-    // }
-
     function getAllSeniors(){
       return seniors;
     }

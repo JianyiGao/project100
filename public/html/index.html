@@ -509,7 +509,7 @@
             <div class="row no-gutters">
               <div class="col-xs-6 col-sm-3" style="height: auto;" ng-repeat="senior in seniors">
                 <figure>
-                  <img class="img-responsive" ng-src="{{ senior.headshot }}" width="300px" height="auto;" alt="senior-picture" data-toggle="modal" data-target="#myModal" ng-click='selectSenior(senior)'/>
+                  <img class="img-responsive" ng-src="{{ senior.headshot }}" width="300px" height="auto;" alt="senior-picture" data-toggle="modal" data-target="#myModal"/>
 
                   <!-- Info Modal -->
                   <div id="myModal" class="modal fade" role="dialog">
@@ -525,7 +525,7 @@
                             <div class="col-md-12">
                               <label for="Full Name">Full Name: </label>
                               <!-- Name -->
-                              <h5 style="color: black;">{{senior.name}}</h5>
+                              <h5 style="color: black;">{{ senior.name }}</h5>
                             </div>
                           </div>
                           <div class="modal-footer">
