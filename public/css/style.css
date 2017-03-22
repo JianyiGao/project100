@@ -72,10 +72,16 @@ p {
 }
 
 .desc {
-  font-size: 12px;
+  font-size: 11px;
   color:white;
   padding: 0px;
   margin: 0px;
+}
+
+.icons {
+  margin-top: 0px;
+  position: absolute;
+  bottom:10px;
 }
 
 strong {
@@ -187,8 +193,7 @@ img {
 .member-details{
 	  position: absolute;
 	  top: 0px;
-    width: 285px;
-    height: 285px;
+    height: 100%;
 	  left: 0 !important;
 	  right: 0 !important;
     background-color:rgba(0,0,0,0.65);

@@ -66,7 +66,7 @@
 					<div class="container-fluid text center" style="margin-bottom: 20px;">
 
 <!--									ACCOUNT TAGS-->
-										<div class="container text-center" style="display: inline-block !important; border-right: 1px solid gray; border-left: 1px solid gray; width: 220px; ">
+										<div class="container text-center" style="display: inline-block !important; border-right: 1px solid gray; border-left: 1px solid gray; width: 200px; ">
 											<div class="row">
 
 												<div class="col-xs-12" style="margin: 0 auto;">
@@ -111,7 +111,7 @@
 
 <!--										RESEARCH TAGS-->
 
-										<div class="container text-center" style="display: inline-block !important; border-right: 1px solid gray; width: 220px; border-left:1px solid gray;">
+										<div class="container text-center" style="display: inline-block !important; border-right: 1px solid gray; width: 200px; border-left:1px solid gray;">
 											<div class="row">
 
 												<div class="col-xs-12" style="display: inline-block !important;">
@@ -207,7 +207,7 @@
 
 
 <!--										CREATIVE TAGS-->
-									<div class="container text-center" style="display: inline-block !important; border-right: 1px solid gray; border-left: 1px solid gray; width: 220px;">
+									<div class="container text-center" style="display: inline-block !important; border-right: 1px solid gray; border-left: 1px solid gray; width: 200px;">
 										<div class="row">
 
 											<div class="col-xs-12" style="display: inline-block !important;">
@@ -292,7 +292,7 @@
 
 
 <!--										DIGITAL TAGS-->
-									<div class="container text-center" style="display: inline-block !important; border-right: 1px solid gray; border-left: 1px solid gray; width: 220px;">
+									<div class="container text-center" style="display: inline-block !important; border-right: 1px solid gray; border-left: 1px solid gray; width: 200px;">
 										<div class="row">
 
 										<div class="col-xs-12" style="display: inline-block !important;">
@@ -360,7 +360,7 @@
 
 
 <!--										MEDIA TAG-->
-									<div class="container text-center" style="display: inline-block !important; width: 220px; border-right: 1px solid gray; border-left: 1px solid gray;">
+									<div class="container text-center" style="display: inline-block !important; width: 200px; border-right: 1px solid gray; border-left: 1px solid gray;">
 										<div class="row">
 
 										<div class="col-xs-12" style="display: inline-block !important;">
@@ -468,7 +468,6 @@
 												</label>
 												</div>
 
-
 												<div class="col-xs-6 checkbox-placement media-tags">
 												<label class="checkbox">
 													<input type="checkbox" name="pitch-writing"><span class="label-text"> Pitch Writing</span>
@@ -507,18 +506,19 @@
             <div class="row no-gutters">
               <div class="col-xs-6 col-sm-3 animate fadeIn team-box" style="height: auto;" ng-repeat="senior in (seniors | filter:senior.filterByPillar) as filteredSeniors">
 								<div class="wrapper">
-									<span class="member-details">
+									<span class="member-details" >
 										<h5>{{ senior.name }}</h5>
 										<h3>{{ senior.position }}</h3>
 										<div class="strip"></div>
                     <p class='desc'>{{ senior.description }}</p>
-                    <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
-                    <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-                    <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
-                    <i class="fa fa-globe fa-2x" aria-hidden="true"></i>
-                    <i class="fa fa-youtube-square fa-2x" aria-hidden="true"></i>
-                    <i class="fa fa-download fa-2x" aria-hidden="true"></i>
-
+                    <div class='icons'>
+                      <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+                      <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                      <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+                      <i class="fa fa-globe fa-2x" aria-hidden="true"></i>
+                      <i class="fa fa-youtube-square fa-2x" aria-hidden="true"></i>
+                      <i class="fa fa-download fa-2x" aria-hidden="true"></i>
+                    </div>
 									</span>
 									<img class="img-responsive senior" ng-src="{{ senior.headshot }}" width="300px" height="auto;" alt="senior-picture" data-toggle="modal" data-target="#myModal" />
 								</div>
