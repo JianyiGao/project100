@@ -35,11 +35,19 @@ var seniorSchema = new Schema({
     type: String,
     required: false
   },
-  personalSite1: {
+  facebook: {
     type: String,
     required: false
   },
-  personalSite2: {
+  twitter: {
+    type: String,
+    required: false
+  },
+  youtube: {
+    type: String,
+    required: false
+  },
+  personalSite1: {
     type: String,
     required: false
   },
@@ -49,18 +57,6 @@ var seniorSchema = new Schema({
   },
   availableDate: {
     type: String,
-    required: false
-  },
-  fullTime: {
-    type: Boolean,
-    required: false
-  },
-  partTime: {
-    type: Boolean,
-    required: false
-  },
-  internship: {
-    type: Boolean,
     required: false
   },
   isWorking: {
