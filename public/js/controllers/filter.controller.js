@@ -34,23 +34,23 @@ function FilterCtrl() {
   }
 }
 
-  // var expectPillarFilter = function(expectedFilter, key) {
-  //   element.all(by.repeater(key + ' in seniors').column(key + '.adminPillar')).then(function(arr) {
-  //     arr.forEach(function(wd, i) {
-  //       expect(wd.getText()).toMatch(expectedFilter[i]);
-  //     });
-  //   });
-  // };
-  //
-  // it('should search across all fields when filtering with a button', function() {
-  //   var searchButton = element(by.model('searchButton'));
-  //   searchButton.clear();
-  //   searchButton.sendKeys('m');
-  //   expectFilters('adminPillar = true');
-  //
-  //   searchButton.clear();
-  //   searchButton.sendKeys('76');
-  //   expectFriendNames(['John', 'Julie'], 'friend');
-  // });
+  var expectPillarFilter = function(expectedFilter, key) {
+    element.all(by.repeater(key + ' in seniors').column(key + '.adminPillar')).then(function(arr) {
+      arr.forEach(function(wd, i) {
+        expect(wd.getText()).toMatch(expectedFilter[i]);
+      });
+    });
+  };
+
+  it('should search across all fields when filtering with a button', function() {
+    var searchButton = element(by.model('searchButton'));
+    searchButton.clear();
+    searchButton.sendKeys('m');
+    expectFilters('adminPillar = true');
+
+    searchButton.clear();
+    searchButton.sendKeys('76');
+    expectFriendNames(['John', 'Julie'], 'friend');
+  });
 
 }());
