@@ -54,13 +54,6 @@ var seniorSchema = new Schema({
   pillar: {
     type: String,
     required: false,
-    name: [
-    creative,
-    strategy,
-    digital,
-    media
-    ],
-
   },
   availableDate: {
     type: String,

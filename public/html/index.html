@@ -504,7 +504,7 @@
 				<section class="bg-blue">
 					<div id="card-view" class="container text-center">
             <div class="row no-gutters">
-              <div class="col-xs-6 col-sm-3 animate fadeIn team-box" style="height: auto;" ng-repeat="senior in (seniors | name:pillars:subpillars) as filteredSeniors">
+              <div class="col-xs-6 col-sm-3 animate fadeIn team-box" style="height: auto;" ng-repeat="senior in seniors as filteredSeniors">
 								<div class="wrapper">
 									<span class="member-details" >
 										<h5>{{ senior.name }}</h5>
@@ -551,7 +551,7 @@
         <script src="../js/controllers/main.controller.js"></script>
         <script src="../js/controllers/filter.controller.js"></script>
         <script src="../js/services/senior.service.js"></script>
-        <script src="../js/filters/name.filter.js"></script>
+        <!-- <script src="../js/filters/name.filter.js"></script> -->
 
     </body>
 	</div>
