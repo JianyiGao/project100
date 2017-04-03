@@ -59,8 +59,7 @@ var seniorSchema = new Schema({
     strategy,
     digital,
     media
-    ],
-
+    ]
   },
   availableDate: {
     type: String,
