@@ -27,18 +27,17 @@ $(document).ready(function(){
 	$('#media').click(function() {
     $(".media-tags").fadeToggle(this.checked);
 	});
+	
+	if ($(window).width() < 480) {
+		alert('hey');
+   $('.team-box').click(function() {
+		 $('.member-details').css('opacity', '1');
+	 });
+	}
+
 
 
 });
 
-	//Make height change more smooth
-	var boxHeight = $('filter').innerHeight();  // get element height
-
-	$('.card-view').css({top:boxHeight}); // push 'curtain' down
-
-	$('#filter').hover(function(){
-		$(this).find('.card-view').stop().animate({top: 0});  // animate to desired top distance
-	},function(){
-		$(this).find('.card-view').stop().animate({top: boxHeight}); // and on mouseout - back down
-	});
+	
 
