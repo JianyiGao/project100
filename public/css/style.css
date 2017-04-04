@@ -140,8 +140,8 @@ input[type="checkbox"]:checked + .label-text:before {
 }
 
 .checkbox-placement {
-	display: inline-block;
-	display: none;
+	display: inline;
+  position: relative;
 }
 
 .checkbox-placement label{
