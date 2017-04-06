@@ -51,7 +51,7 @@
 						<br>
 					</div>
 				</section>
-		
+
 			<!--CARD VIEW-->
 			<main>
 				<section class="bg-blue" style="padding: 20px;">
@@ -65,23 +65,32 @@
 										<div class="strip"></div>
                     <p class='desc'>{{ senior.description }}</p>
                     <div class='icons'>
-											
-											<!--FACEBOOK-->											
-                      <a ng-if="false" href="{{ senior.facebook }}" href="_blank">
+
+											<!--FACEBOOK-->
+                      <a href="{{ senior.facebook }}" href="_blank" ng-hide='senior.facebook == ""'>
 												<i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
 											</a>
-											
+
 											<!--LINKEDIN-->
-											<a href="{{ senior.linkedin }}" target="_blank" ><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-											
+											<a href="{{ senior.linkedin }}" target="_blank" ng-hide='senior.linkedin == ""'>
+                        <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                      </a>
+
 											<!--TWITTER-->
-                      <a href="{{ senior.twitter }}" target="_blank"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-											
+                      <a href="{{ senior.twitter }}" target="_blank" ng-hide='senior.twitter == ""'>
+                        <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+                      </a>
+
 											<!--PERSONAL WEBSITE-->
-                      <a href="{{ senior.personalSite1 }}"><i class="fa fa-globe fa-2x" aria-hidden="true"></i></a>
-											
+                      <a href="{{ senior.personalSite1 }}" target="_blank" ng-hide='senior.personalSite1 == ""'>
+                        <i class="fa fa-globe fa-2x" aria-hidden="true"></i>
+                      </a>
+
 											<!--RESUME-->
-                      <a href="{{ senior.resume }}" target="_blank"><i class="fa fa-file-o fa-2x" aria-hidden="true"></i></a>
+                      <a href="{{ senior.resume }}" target="_blank" ng-hide='senior.resume == ""' >
+                        <i class="fa fa-file-o fa-2x" aria-hidden="true"></i>
+                      </a>
+
                     </div>
 									</span>
 									<img class="img-responsive senior" ng-src="{{ senior.headshot }}" width="300px" height="auto;" alt="senior-picture" data-toggle="modal" data-target="#myModal" alt="Agency headshot"/>
