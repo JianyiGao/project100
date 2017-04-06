@@ -70,7 +70,7 @@ var seniorSchema = new Schema({
   isGraduating: {
     type: Boolean,
     required: false
-  }
+  },
 
 });
 
