@@ -27,13 +27,6 @@ $(document).ready(function(){
 	$('#media').click(function() {
     $(".media-tags").fadeToggle(this.checked);
 	});
-	
-	if ($(window).width() < 1000) {
-		alert('hey');
-//   $('.team-box').click(function() {
-//		 $('.member-details').css('opacity', '1');
-//	 });
-	}
 
 });
 
