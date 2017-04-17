@@ -188,6 +188,7 @@ img {
 .wrapper {
 	position: relative;
 	padding: 0;
+	overflow: hidden;
 }
 
 .member-details{
@@ -220,14 +221,14 @@ img {
 		background-color:rgba(255,255,255,0.1);
 }
 
-/* hired banner */
+/*BANNER CSS*/
 
 .corner-ribbon{
-  width: 100px;
+  width: 200px;
   background: #e43;
   position: absolute;
   top: 25px;
-  /*left: -50px;*/
+  left: -100px;
   text-align: center;
   line-height: 20px;
   letter-spacing: 1px;
@@ -236,13 +237,13 @@ img {
   -webkit-transform: rotate(-45deg);
 }
 
-.corner-ribbon.sticky{
-  /*position: fixed;*/
+.corner-ribbon.shadow{
+  box-shadow: 0 0 3px rgba(0,0,0,.3);
 }
 
 .corner-ribbon.top-right{
-  top: 33px;
-  right: -7px;
+  top: 42px;
+  right: -40px;
   left: auto;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
