@@ -284,6 +284,33 @@ img {
 
     }
 
+/*For small breakpoint*/
+@media only screen and (max-width : 992px) {
+	h5 {
+		font-size: 14px;
+	}
+
+	h3 {
+		font-size: 12px;
+	}
+	
+	.desc {
+		font-size: 12px;
+	}
+	
+}
+
+/*For extra small breakpoint*/
+@media only screen and (max-width : 529px) {
+	
+	.desc {
+		display: none;
+	}
+	
+}
+
+
+
 /*For iPhone 5*/
 @media only screen and (max-width : 321px) {
 	h5 {
