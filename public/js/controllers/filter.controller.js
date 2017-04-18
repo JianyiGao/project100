@@ -1,23 +1,34 @@
-(function () {'use strict';
+(function () {
 
 angular.module('Project100')
       .controller('FilterCtrl', FilterCtrl);
 
+FilterCtrl.$inject = ['$scope', 'SeniorService'];
+
+
 // Functions - Definitions
-function FilterCtrl() {
+function FilterCtrl($scope, SeniorService) {
+  $scope.seniors = SeniorService.get();
+
+  $scope.$watch(function(){
+     return SeniorService.get();
+   }, function(){
+     $scope.seniors = SeniorService.get();
+   });
+
   // Variables - Private
   var self = this;
 
   // Variables - Public
   self.filter = {};
-  self.seniors = seniors;
+  self.seniors = $scope.seniors;
 
   // Functions - Public
-  self.filterByCategory = filterByCategory;
-  self.getCategories = getCategories;
+  self.filterByPillar = filterByPillar;
+  self.getPillars = getPillars;
 
   // Functions - Definitions
-  function filterbyPillar(senior) {
+  function filterByPillar(senior) {
     return self.filter[senior.pillar] || noFilter(self.filter);
   }
 

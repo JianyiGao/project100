@@ -70,6 +70,10 @@ var seniorSchema = new Schema({
   isGraduating: {
     type: Boolean,
     required: false
+  },
+  isHired: {
+    type: Boolean,
+    required: false
   }
 
 });

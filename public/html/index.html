@@ -22,7 +22,7 @@
     <div ng-controller="MainController">
     <body data-spy="scroll" data-target="#collapseNav" data-offset="65">
 
-        <header>
+         <header>
             <nav id="nav" class="navbar navbar-dark navbar-fixed-top" style="background-color: rgba(51, 51, 51, 0.95);">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#home" style="margin-top:-10px; margin-bottom: -14px;">
@@ -34,9 +34,32 @@
                 </div>
 							<div class="collapse navbar-toggleable-xs" id="collapseNav">
 								<ul class="nav navbar-nav pull-right">
+
 									<li class="nav-item">
-										<a class="nav-link" href="#">THE TALENT</a>
+											<a class="nav-link" href="http://theagency.jou.ufl.edu/#home">HOME</a>
 									</li>
+									<li class="nav-item">
+											<a class="nav-link" href="http://theagency.jou.ufl.edu/#about">ABOUT</a>
+									</li>
+									<li class="nav-item">
+											<a class="nav-link" href="http://theagency.jou.ufl.edu/#mavy">MAVY</a>
+									</li>
+									<li class="nav-item">
+											<a class="nav-link" href="http://theagency.jou.ufl.edu/#clients">CLIENTS</a>
+									</li>
+									<li class="nav-item">
+											<a class="nav-link" href="http://theagency.jou.ufl.edu/#team">TEAM</a>
+									</li>
+									<li class="nav-item">
+											<a class="nav-link" href="http://theagency.jou.ufl.edu/#blog">BLOG</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="http://theagency.jou.ufl.edu/#talent"><span style="color: #e54343;">TALENT</span></a>
+									</li>
+									<li class="nav-item">
+											<a class="nav-link" href="http://theagency.jou.ufl.edu/#contact">CONTACT</a>
+									</li>
+
 								</ul>
 							</div>
             </nav>
@@ -47,11 +70,10 @@
 					<div id="welcome-view" class="container-fluid text-center">
 						<img class="img-responsive" src="../img/Hire_Us_Twice.png" style="margin: 0 auto;"/>
 						<hr>
-						<p><strong >We’re not sure who’s happier:</strong> Our clients, or their HR directors searching for top talent. That’s why when some schools call it a “Placement Rate” after graduation, our clients see it as “Value Add”. The Agency’s team members bring applicable talent and proven real-world performance to the table, the moment they graduate. That’s why so many of our clients, as well as top names in the advertising industry, recruit The Agency’s alumni to fill key positions.</p>
+						<p><strong >We’re not sure who’s happier:</strong> Our clients, or their HR directors searching for top talent. That’s why when some schools call it a “Placement Rate” after graduation, our clients see it as “Value Add”. The Agency’s Team members bring applicable talent and proven real-world performance to the table, the moment they graduate. That’s why so many of our clients, as well as top names in the advertising industry, recruit The Agency’s alumni to fill key positions.</p>
 						<br>
 					</div>
 				</section>
-
 
 						<!--SEARCH-->
 				<section>
@@ -71,12 +93,12 @@
 
 												<div class="col-xs-12" style="margin: 0 auto;">
 													<label class="checkbox">
-														<input type="checkbox" id="accounts" name="accounts" ng-model="senior.filter[pillar]"><span class="label-text"> ACCOUNTS</span>
+														<input type="checkbox" id="accounts" name="accounts" ng-model="senior.acc" ng-disabled="senior.res || senior.cre || senior.dig || senior.med" ng-click="senior.research = !senior.research ; senior.creative = !senior.creative ; senior.digital = !senior.digital ; senior.media = !senior.media"><span class="label-text"> ACCOUNTS</span>
 													</label>
 												</div>
 											</div>
 
-											<div class="row">
+											<!-- <div class="row">
 
 													<div class="col-xs-6 checkbox-placement account-tags">
 														<label class="checkbox">
@@ -102,7 +124,7 @@
 														</label>
 													</div>
 
-											</div>
+											</div> -->
 										</div>
 
 <!--										END OF ACCOUNT TAGS-->
@@ -116,12 +138,12 @@
 
 												<div class="col-xs-12" style="display: inline-block !important;">
 													<label class="checkbox move-over">
-														<input type="checkbox" id="research" name="research"><span class="label-text"> RESEARCH</span>
+														<input type="checkbox" id="research" name="research" ng-model="senior.res" ng-disabled="senior.acc || senior.cre || senior.dig || senior.med" ng-click="senior.accounts = !senior.accounts ; senior.creative = !senior.creative ; senior.digital = !senior.digital ; senior.media = !senior.media"><span class="label-text"> RESEARCH</span>
 													</label>
 												</div>
 											</div>
 
-											<div class="row">
+											<!-- <div class="row">
 
 												<div class="col-xs-6 checkbox-placement research-tags">
 												<label class="checkbox">
@@ -201,7 +223,7 @@
 												</label>
 												</div>
 
-										</div>
+										</div> -->
 									</div>
 <!--										END OF RESEARCH TAGS-->
 
@@ -212,12 +234,12 @@
 
 											<div class="col-xs-12" style="display: inline-block !important;">
 												<label class="checkbox move-over">
-													<input type="checkbox" id="creative" name="creative"><span class="label-text"> CREATIVE</span>
+													<input type="checkbox" id="creative" name="creative" ng-model="senior.cre" ng-disabled="senior.res || senior.acc || senior.dig || senior.med" ng-click="senior.research = !senior.research ; senior.accounts = !senior.accounts ; senior.digital = !senior.digital ; senior.media = !senior.media"><span class="label-text"> CREATIVE</span>
 												</label>
 											</div>
 										</div>
 
-										<div class="row">
+										<!-- <div class="row">
 
 													<div class="col-xs-6 checkbox-placement creative-tags">
 													<label class="checkbox">
@@ -285,7 +307,7 @@
 													</label>
 													</div>
 
-										</div>
+										</div> -->
 									</div>
 <!--								END OF CREATIVE TAGS			-->
 
@@ -297,12 +319,12 @@
 
 										<div class="col-xs-12" style="display: inline-block !important;">
 											<label class="checkbox move-over">
-												<input type="checkbox" id="digital" name="digital"><span class="label-text"> DIGITAL</span>
+												<input type="checkbox" id="digital" name="digital" ng-model="senior.dig" ng-disabled="senior.res || senior.cre || senior.med || senior.acc" ng-click="senior.research = !senior.research ; senior.creative = !senior.creative ; senior.accounts = !senior.accounts ; senior.media = !senior.media"><span class="label-text"> DIGITAL</span>
 											</label>
 										</div>
 										</div>
 
-										<div class="row">
+										<!-- <div class="row">
 
 												<div class="col-xs-6 checkbox-placement digital-tags">
 												<label class="checkbox">
@@ -353,8 +375,8 @@
 												</label>
 												</div>
 
-										</div>
-										</div>
+										</div> -->
+									</div>
 
 <!--										END OF DIGITAL TAGS-->
 
@@ -365,12 +387,12 @@
 
 										<div class="col-xs-12" style="display: inline-block !important;">
 											<label class="checkbox move-over">
-												<input type="checkbox" id="media" name="media"><span class="label-text"> MEDIA</span>
+												<input type="checkbox" id="media" name="media" ng-model="senior.med" ng-disabled="senior.res || senior.cre || senior.dig || senior.acc" ng-click="senior.research = !senior.research ; senior.creative = !senior.creative ; senior.digital = !senior.digital ; senior.accounts = !senior.accounts"><span class="label-text"> MEDIA</span>
 											</label>
 										</div>
 										</div>
 
-										<div class="row">
+										<!-- <div class="row">
 
 												<div class="col-xs-6 checkbox-placement media-tags">
 												<label class="checkbox">
@@ -492,35 +514,59 @@
 													<input type="checkbox" name="wordpress-cms"><span class="label-text"> WordPress (CMS)</span>
 												</label>
 												</div>
-										</div>
+										</div> -->
 								</div>
 
-						</div><!--End of container-fluid-->
+						</div>
+            <!--End of container-fluid-->
 
 			</section>
 
 			<!--CARD VIEW-->
-			<main>
-				<section class="bg-blue">
+      <main ng-hide='senior.accounts'>
+				<section class="bg-blue" style="padding: 20px;">
 					<div id="card-view" class="container text-center">
             <div class="row no-gutters">
-              <div class="col-xs-6 col-sm-3 animate fadeIn team-box" style="height: auto;" ng-repeat="senior in seniors as filteredSeniors">
-								<div class="wrapper">
+
+              <div class="col-xs-6 col-sm-4 col-lg-3 colanimate fadeIn team-box" style="height: auto;" ng-repeat="senior in seniors as filteredSeniors">
+                <div class="wrapper">
+                  <div class="corner-ribbon top-right sticky red shadow" ng-show='senior.isHired == true'><strong>HIRED</strong></div>
 									<span class="member-details" >
+
 										<h5>{{ senior.name }}</h5>
 										<h3>{{ senior.position }}</h3>
 										<div class="strip"></div>
                     <p class='desc'>{{ senior.description }}</p>
                     <div class='icons'>
-                      <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
-                      <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-                      <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
-                      <i class="fa fa-globe fa-2x" aria-hidden="true"></i>
-                      <i class="fa fa-youtube-square fa-2x" aria-hidden="true"></i>
-                      <i class="fa fa-download fa-2x" aria-hidden="true"></i>
+
+											<!--FACEBOOK-->
+                      <a href="{{ senior.facebook }}" target="_blank" ng-hide='senior.facebook == ""'>
+												<i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+											</a>
+
+											<!--LINKEDIN-->
+											<a href="{{ senior.linkedin }}" target="_blank" ng-hide='senior.linkedin == ""'>
+                        <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                      </a>
+
+											<!--TWITTER-->
+                      <a href="{{ senior.twitter }}" target="_blank" ng-hide='senior.twitter == ""'>
+                        <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+                      </a>
+
+											<!--PERSONAL WEBSITE-->
+                      <a href="{{ senior.personalSite1 }}" target="_blank" ng-hide='senior.personalSite1 == ""'>
+                        <i class="fa fa-globe fa-2x" aria-hidden="true"></i>
+                      </a>
+
+											<!--RESUME-->
+                      <a href="{{ senior.resume }}" target="_blank" ng-hide='senior.resume == ""' >
+                        <i class="fa fa-file-o fa-2x" aria-hidden="true"></i>
+                      </a>
+
                     </div>
 									</span>
-									<img class="img-responsive senior" ng-src="{{ senior.headshot }}" width="300px" height="auto;" alt="senior-picture" data-toggle="modal" data-target="#myModal" />
+									<img class="img-responsive senior" ng-src="{{ senior.headshot }}" width="300px" height="auto;" alt="senior-picture" data-toggle="modal" data-target="#myModal" alt="Agency headshot"/>
 								</div>
                </div>
 
@@ -529,6 +575,220 @@
 				</section>
 
   	</main>
+
+    <main ng-hide='senior.research'>
+      <section class="bg-blue" style="padding: 20px;">
+        <div id="card-view" class="container text-center">
+          <div class="row no-gutters">
+
+            <div class="col-xs-6 col-sm-4 col-lg-3 colanimate fadeIn team-box" style="height: auto;" ng-repeat="senior in seniors as filteredSeniors">
+              <div class="wrapper">
+                <div class="corner-ribbon top-right sticky red shadow" ng-show='senior.isHired == true'><strong>HIRED</strong></div>
+                <span class="member-details" >
+
+                  <h5>{{ senior.name }}</h5>
+                  <h3>{{ senior.position }}</h3>
+                  <div class="strip"></div>
+                  <p class='desc'>{{ senior.description }}</p>
+                  <div class='icons'>
+
+                    <!--FACEBOOK-->
+                    <a href="{{ senior.facebook }}" target="_blank" ng-hide='senior.facebook == ""'>
+                      <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+                    </a>
+
+                    <!--LINKEDIN-->
+                    <a href="{{ senior.linkedin }}" target="_blank" ng-hide='senior.linkedin == ""'>
+                      <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                    </a>
+
+                    <!--TWITTER-->
+                    <a href="{{ senior.twitter }}" target="_blank" ng-hide='senior.twitter == ""'>
+                      <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+                    </a>
+
+                    <!--PERSONAL WEBSITE-->
+                    <a href="{{ senior.personalSite1 }}" target="_blank" ng-hide='senior.personalSite1 == ""'>
+                      <i class="fa fa-globe fa-2x" aria-hidden="true"></i>
+                    </a>
+
+                    <!--RESUME-->
+                    <a href="{{ senior.resume }}" target="_blank" ng-hide='senior.resume == ""' >
+                      <i class="fa fa-file-o fa-2x" aria-hidden="true"></i>
+                    </a>
+
+                  </div>
+                </span>
+                <img class="img-responsive senior" ng-src="{{ senior.headshot }}" width="300px" height="auto;" alt="senior-picture" data-toggle="modal" data-target="#myModal" alt="Agency headshot"/>
+              </div>
+             </div>
+
+          </div>
+         </div>
+      </section>
+
+  </main>
+
+  <main ng-hide='senior.creative'>
+    <section class="bg-blue" style="padding: 20px;">
+      <div id="card-view" class="container text-center">
+        <div class="row no-gutters">
+
+          <div class="col-xs-6 col-sm-4 col-lg-3 colanimate fadeIn team-box" style="height: auto;" ng-repeat="senior in seniors as filteredSeniors">
+            <div class="wrapper">
+              <div class="corner-ribbon top-right sticky red shadow" ng-show='senior.isHired == true'><strong>HIRED</strong></div>
+              <span class="member-details" >
+
+                <h5>{{ senior.name }}</h5>
+                <h3>{{ senior.position }}</h3>
+                <div class="strip"></div>
+                <p class='desc'>{{ senior.description }}</p>
+                <div class='icons'>
+
+                  <!--FACEBOOK-->
+                  <a href="{{ senior.facebook }}" target="_blank" ng-hide='senior.facebook == ""'>
+                    <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+                  </a>
+
+                  <!--LINKEDIN-->
+                  <a href="{{ senior.linkedin }}" target="_blank" ng-hide='senior.linkedin == ""'>
+                    <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                  </a>
+
+                  <!--TWITTER-->
+                  <a href="{{ senior.twitter }}" target="_blank" ng-hide='senior.twitter == ""'>
+                    <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+                  </a>
+
+                  <!--PERSONAL WEBSITE-->
+                  <a href="{{ senior.personalSite1 }}" target="_blank" ng-hide='senior.personalSite1 == ""'>
+                    <i class="fa fa-globe fa-2x" aria-hidden="true"></i>
+                  </a>
+
+                  <!--RESUME-->
+                  <a href="{{ senior.resume }}" target="_blank" ng-hide='senior.resume == ""' >
+                    <i class="fa fa-file-o fa-2x" aria-hidden="true"></i>
+                  </a>
+
+                </div>
+              </span>
+              <img class="img-responsive senior" ng-src="{{ senior.headshot }}" width="300px" height="auto;" alt="senior-picture" data-toggle="modal" data-target="#myModal" alt="Agency headshot"/>
+            </div>
+           </div>
+
+        </div>
+       </div>
+    </section>
+
+</main>
+
+<main ng-hide='senior.digital'>
+  <section class="bg-blue" style="padding: 20px;">
+    <div id="card-view" class="container text-center">
+      <div class="row no-gutters">
+
+        <div class="col-xs-6 col-sm-4 col-lg-3 colanimate fadeIn team-box" style="height: auto;" ng-repeat="senior in seniors as filteredSeniors">
+          <div class="wrapper">
+            <div class="corner-ribbon top-right sticky red shadow" ng-show='senior.isHired == true'><strong>HIRED</strong></div>
+            <span class="member-details" >
+
+              <h5>{{ senior.name }}</h5>
+              <h3>{{ senior.position }}</h3>
+              <div class="strip"></div>
+              <p class='desc'>{{ senior.description }}</p>
+              <div class='icons'>
+
+                <!--FACEBOOK-->
+                <a href="{{ senior.facebook }}" target="_blank" ng-hide='senior.facebook == ""'>
+                  <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+                </a>
+
+                <!--LINKEDIN-->
+                <a href="{{ senior.linkedin }}" target="_blank" ng-hide='senior.linkedin == ""'>
+                  <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                </a>
+
+                <!--TWITTER-->
+                <a href="{{ senior.twitter }}" target="_blank" ng-hide='senior.twitter == ""'>
+                  <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+                </a>
+
+                <!--PERSONAL WEBSITE-->
+                <a href="{{ senior.personalSite1 }}" target="_blank" ng-hide='senior.personalSite1 == ""'>
+                  <i class="fa fa-globe fa-2x" aria-hidden="true"></i>
+                </a>
+
+                <!--RESUME-->
+                <a href="{{ senior.resume }}" target="_blank" ng-hide='senior.resume == ""' >
+                  <i class="fa fa-file-o fa-2x" aria-hidden="true"></i>
+                </a>
+
+              </div>
+            </span>
+            <img class="img-responsive senior" ng-src="{{ senior.headshot }}" width="300px" height="auto;" alt="senior-picture" data-toggle="modal" data-target="#myModal" alt="Agency headshot"/>
+          </div>
+         </div>
+
+      </div>
+     </div>
+  </section>
+
+</main>
+
+<main ng-hide='senior.media'>
+  <section class="bg-blue" style="padding: 20px;">
+    <div id="card-view" class="container text-center">
+      <div class="row no-gutters">
+
+        <div class="col-xs-6 col-sm-4 col-lg-3 colanimate fadeIn team-box" style="height: auto;" ng-repeat="senior in seniors as filteredSeniors">
+          <div class="wrapper">
+            <div class="corner-ribbon top-right sticky red shadow" ng-show='senior.isHired == true'><strong>HIRED</strong></div>
+            <span class="member-details" >
+
+              <h5>{{ senior.name }}</h5>
+              <h3>{{ senior.position }}</h3>
+              <div class="strip"></div>
+              <p class='desc'>{{ senior.description }}</p>
+              <div class='icons'>
+
+                <!--FACEBOOK-->
+                <a href="{{ senior.facebook }}" target="_blank" ng-hide='senior.facebook == ""'>
+                  <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+                </a>
+
+                <!--LINKEDIN-->
+                <a href="{{ senior.linkedin }}" target="_blank" ng-hide='senior.linkedin == ""'>
+                  <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                </a>
+
+                <!--TWITTER-->
+                <a href="{{ senior.twitter }}" target="_blank" ng-hide='senior.twitter == ""'>
+                  <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+                </a>
+
+                <!--PERSONAL WEBSITE-->
+                <a href="{{ senior.personalSite1 }}" target="_blank" ng-hide='senior.personalSite1 == ""'>
+                  <i class="fa fa-globe fa-2x" aria-hidden="true"></i>
+                </a>
+
+                <!--RESUME-->
+                <a href="{{ senior.resume }}" target="_blank" ng-hide='senior.resume == ""' >
+                  <i class="fa fa-file-o fa-2x" aria-hidden="true"></i>
+                </a>
+
+              </div>
+            </span>
+            <img class="img-responsive senior" ng-src="{{ senior.headshot }}" width="300px" height="auto;" alt="senior-picture" data-toggle="modal" data-target="#myModal" alt="Agency headshot"/>
+          </div>
+         </div>
+
+      </div>
+     </div>
+  </section>
+
+</main>
+
+
 
         <footer>
             <div class="container-fluid">
