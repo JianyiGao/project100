@@ -32,14 +32,11 @@ function MainController($scope, SeniorService){
     senior.isBeingEdited = false;
   }
 
-
-
-
-  // $('.grid').masonry({
-  //   // options
-  //   itemSelector: '.grid-item',
-  //   columnWidth: 200
-  // });
+  $('.grid').masonry({
+    // options
+    itemSelector: '.grid-item',
+    columnWidth: 200
+  });
 
 
 
