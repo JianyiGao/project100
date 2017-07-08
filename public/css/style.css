@@ -345,3 +345,9 @@ img {
 .fa-file-o:hover, .fa-globe:hover {
 	opacity: 0.7;
 }
+
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+ }
+

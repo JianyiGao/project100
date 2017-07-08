@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700" type="text/css">
 			  <link rel="stylesheet" type="text/css" href="../css/style.css">
         <script src="https://use.fontawesome.com/8f3cfed809.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
     </head>
 
     <div ng-controller="MainController">
@@ -85,8 +86,9 @@
 					</div>
 					
 					<div id="card-view" class="container text-center">
-            <div class="row no-gutters">
-              <div class="col-xs-6 col-sm-4 col-lg-3 colanimate fadeIn team-box" style="height: auto;" ng-repeat="senior in seniors as filteredSeniors">
+					<img src="../img/spinner.svg" style="width: 100px;" ng-show="!seniors">		
+            <div class="row no-gutters" style="min-height: 200px;">
+              <div class="col-xs-6 col-sm-4 col-lg-3 colanimate fadeIn team-box" style="height: auto;" ng-repeat="senior in seniors as filteredSeniors" ng-cloak>
                 <div class="wrapper">
                   <div class="corner-ribbon top-right sticky red shadow" ng-show='senior.isHired == true'><strong>HIRED</strong></div>
 									<span class="member-details" >
@@ -149,7 +151,6 @@
 				<!---JAVASCRIPT LIBRARIES-->
         <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
         <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
         <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="../js/app.js"></script>
