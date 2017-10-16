@@ -31,7 +31,23 @@ body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
+.dropdown .dropdown-menu {
+    -webkit-transition: all 5s;
+    -moz-transition: all 5s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.dropdown.open .dropdown-menu {
+    max-height: 300px;
+    opacity: 1;
+}
 row {
 	padding-top: 10p !important;
 	margin-top: 10px;
