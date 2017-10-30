@@ -3,11 +3,9 @@
   angular.module('Project100', []);
 
 }());
-
-
 /* SHOW/HIDE TAGS*/
 $(document).ready(function(){
-	
+
 	$('#accounts').click(function() {
     $(".account-tags").fadeToggle(this.checked);
 	});
@@ -29,6 +27,3 @@ $(document).ready(function(){
 	});
 
 });
-
-	
-

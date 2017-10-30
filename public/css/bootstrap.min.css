@@ -5078,8 +5078,8 @@ a.bg-danger:hover {
 	display: -ms-flexbox;
 	display: flex;
 	box-sizing: border-box;
-	margin-right: -.5rem;
-	margin-left: -.5rem;
+	margin-right: auto;
+	margin-left: auto;
 	flex-direction: row;
 	-webkit-flex: 0 1 auto;
 	-ms-flex: 0 1 auto;
@@ -5185,7 +5185,7 @@ section .container-fluid .inner {
 }
 
 section.bg-red {
-	background-color: #dc695a
+	background-color: #494949
 }
 
 section.bg-gray {
