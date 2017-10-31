@@ -70,6 +70,9 @@ input[type="checkbox"] + span .label-text:before {
 	font-family: 'FontAwesome';
 }
 
+input[type=checkbox] + label:before {
+    letter-spacing: 7px;
+}
 
  .mainController {
    padding-top: 42px;
