@@ -1101,6 +1101,8 @@ fieldset[disabled] .form-control {
 .checkbox-inline input[type=checkbox],
 .radio input[type=radio],
 .radio-inline input[type=radio] {
+	display: none;
+	margin-right: -200000px;
 	position: absolute;
 	margin-top: .25rem;
 	margin-left: -1.25rem
