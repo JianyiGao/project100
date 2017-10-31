@@ -11,6 +11,7 @@
 
   <!-- Bootstrap CSS | Stylesheets -->
   <link rel="stylesheet" href="../css/plugins.min.css"/>
+  <link rel="stylesheet" href="../css/fontsyeah.css"/>
   <link rel="stylesheet" href="../css/socials.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700" type="text/css"/>
@@ -99,16 +100,18 @@
             <div class="row">
               <div class="col-xs-2">
 
-                <select class="multiple" id="multiple-checkboxes1" multiple="multiple">
-                  <div value="title"></div>
+                <select id="multiple-checkboxes1" multiple="multiple">
                   <option value="php">Account Management</option>
                   <option value="javascript">Client-Facing Experience</option>
                   <option value="java">Report Writing</option>
+                  <option value="teamwork">Teamwork</option>
+                  <option value="time">Time Management</option>
                   <option value="sql">Public Speaking</option>
                 </select>
 
               </div>
               <div class="col-xs-2">
+
                 <select id="multiple-checkboxes2" multiple="multiple">
                   <option value="php">Coding Qualitative Data</option>
                   <option value="javascript">Ethical Consumer Research (IRB)</option>
@@ -244,38 +247,7 @@
   <script src="../js/services/senior.service.js"></script>
   <script src="../js/filters/name.filter.js"></script>
   <script type="text/javascript">
-  $(document).ready(function() {
-    $("#multiple-checkboxes1").multiselect({
-      nonSelectedText:'ACCOUNTS',
-      nSelectedText: 'ACCOUNTS',
-      allSelectedText: 'ACCOUNTS',
-    });
-    $("#multiple-checkboxes2").multiselect({
-      nonSelectedText:'RESEARCH',
-      nSelectedText: 'RESEARCH',
-      allSelectedText: 'RESEARCH',
-    });
-    $("#multiple-checkboxes3").multiselect({
-      nonSelectedText:'CREATIVE',
-      nSelectedText: 'CREATIVE',
-      allSelectedText: 'CREATIVE',
-    });
-    $("#multiple-checkboxes4").multiselect({
-      nonSelectedText:'DIGITAL',
-      nSelectedText: 'DIGITAL',
-      allSelectedText: 'DIGITAL',
-    });
-    $("#multiple-checkboxes5").multiselect({
-      nonSelectedText:'MEDIA',
-      nSelectedText: 'MEDIA',
-      allSelectedText: 'MEDIA',
-    });
-    $("#multiple-checkboxes6").multiselect({
-      nonSelectedText:'ADMIN',
-      nSelectedText: 'ADMIN',
-      allSelectedText: 'ADMIN',
-    });
-  });
+
 
   </script>
 

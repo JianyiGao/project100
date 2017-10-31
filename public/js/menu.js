@@ -1123,7 +1123,7 @@
                 }
             }
         },
-        
+
         /**
          * Unbinds the whole plugin.
          */

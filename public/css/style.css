@@ -99,7 +99,7 @@ p {
   margin: 0px;
 }
 body {
-    padding: 20px;
+    padding: 0px;
 }
 .multiselect-container div.checkbox {
     margin: 0;
@@ -109,10 +109,11 @@ body {
     white-space: nowrap;
 }
 .multiselect-container div.checkbox {
-    padding: 5px 15px 5px 35px;
+    padding: 5px 15px 5px 5px;
 }
 .checkbox{
   border-radius: 0 px;
+  position: absolute;
 }
 .icons {
   margin-top: 0px;

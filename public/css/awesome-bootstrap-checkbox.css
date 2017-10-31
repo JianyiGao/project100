@@ -15,7 +15,7 @@
   height: 17px;
   left: 0;
   margin-left: -20px;
-  border: 1px solid #cccccc;
+  border: 1px solid red;
   border-radius: 3px;
   background-color: #fff;
   -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
@@ -33,7 +33,7 @@
   padding-left: 3px;
   padding-top: 1px;
   font-size: 11px;
-  color: #555555;
+  color: red;
 }
 .checkbox input[type="checkbox"],
 .checkbox input[type="radio"] {
@@ -314,7 +314,7 @@
 input[type="checkbox"].styled:checked + label:after,
 input[type="radio"].styled:checked + label:after {
   font-family: 'FontAwesome';
-  content: "\f00c";
+  content: "\f14a";
 }
 input[type="checkbox"] .styled:checked + label::before,
 input[type="radio"] .styled:checked + label::before {
