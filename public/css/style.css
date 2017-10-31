@@ -71,7 +71,7 @@ input[type="checkbox"] + span .label-text:before {
 }
 
 input[type=checkbox] + label:before {
-    letter-spacing: 7px;
+    letter-spacing: 7.3px;
 }
 
  .mainController {
