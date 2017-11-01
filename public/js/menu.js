@@ -262,22 +262,27 @@
                 else if (options.length > this.numberDisplayed) {
                   if (this.nonSelectedText=='ACCOUNTS'){
                   $("button[title='ACCOUNTS']").css("font-weight", "bold");
-                  //$("button[title='ACCOUNTS']").css("text-decoration", "underline");
+                  $("button[title='ACCOUNTS']").parent().css("background-color", "rgba(255,255,255,.2)");
                 }
                 else if (this.nonSelectedText=='RESEARCH'){
 $("button[title='RESEARCH']").css("font-weight", "bold");
+$("button[title='RESEARCH']").parent().css("background-color", "rgba(255,255,255,.2)");
                 }
                 else if (this.nonSelectedText=='CREATIVE'){
 $("button[title='CREATIVE']").css("font-weight", "bold");
+$("button[title='CREATIVE']").parent().css("background-color", "rgba(255,255,255,.2)");
                 }
                 else if (this.nonSelectedText=='DIGITAL'){
 $("button[title='DIGITAL']").css("font-weight", "bold");
+$("button[title='DIGITAL']").parent().css("background-color", "rgba(255,255,255,.2)");
                 }
                 else if (this.nonSelectedText=='MEDIA'){
 $("button[title='MEDIA']").css("font-weight", "bold");
+$("button[title='MEDIA']").parent().css("background-color", "rgba(255,255,255,.2)");
                 }
                 else if (this.nonSelectedText=='ADMIN'){
 $("button[title='ADMIN']").css("font-weight", "bold");
+$("button[title='ADMIN']").parent().css("background-color", "rgba(255,255,255,.2)");
               }
 
 
@@ -309,21 +314,27 @@ $("button[title='ADMIN']").css("font-weight", "bold");
                 if (options.length === 0) {
                   if (this.nonSelectedText=='ACCOUNTS'){
                   $("button[title='ACCOUNTS']").css("font-weight", "normal");
+                  $("button[title='ACCOUNTS']").parent().css("background-color", "");
                 }
                 else if (this.nonSelectedText=='RESEARCH'){
 $("button[title='RESEARCH']").css("font-weight", "normal");
+$("button[title='RESEARCH']").parent().css("background-color", "");
                 }
                 else if (this.nonSelectedText=='CREATIVE'){
 $("button[title='CREATIVE']").css("font-weight", "normal");
+$("button[title='CREATIVE']").parent().css("background-color", "");
                 }
                 else if (this.nonSelectedText=='DIGITAL'){
 $("button[title='DIGITAL']").css("font-weight", "normal");
+$("button[title='DIGITAL']").parent().css("background-color", "");
                 }
                 else if (this.nonSelectedText=='MEDIA'){
 $("button[title='MEDIA']").css("font-weight", "normal");
+$("button[title='MEDIA']").parent().css("background-color", "");
                 }
                 else if (this.nonSelectedText=='ADMIN'){
 $("button[title='ADMIN']").css("font-weight", "normal");
+$("button[title='ADMIN']").parent().css("background-color", "");
               }
                     return this.nonSelectedText;
 
