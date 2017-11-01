@@ -74,6 +74,12 @@ input[type=checkbox] + label:before {
     letter-spacing: 7.3px;
 }
 
+label {
+    text-align: left;
+    padding: 0px;
+    display: inline-block !important; 
+}
+
  .mainController {
    padding-top: 42px;
  }
