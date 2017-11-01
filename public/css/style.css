@@ -74,11 +74,6 @@ input[type=checkbox] + label:before {
     letter-spacing: 7.3px;
 }
 
-label {
-    text-align: left;
-    padding: 0px;
-    display: inline-block !important; 
-}
 
  .mainController {
    padding-top: 42px;
@@ -399,4 +394,10 @@ img {
 
 .fa-file-o:hover, .fa-globe:hover {
 	opacity: 0.7;
+}
+
+label {
+    text-align: left;
+    padding: 0px;
+    display: inline-block !important;
 }
