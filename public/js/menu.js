@@ -178,7 +178,10 @@
 
         // Placeholder via data attributes
         if (this.$select.attr("data-placeholder")) {
+//$("button[title='ACCOUNTS']").css("font-weight", "normal");
             options.nonSelectedText = this.$select.data("placeholder");
+
+
         }
 
         this.options = this.mergeOptions($.extend({}, options, this.$select.data()));
@@ -237,7 +240,8 @@
                     return this.disabledText;
                 }
                 else if (options.length === 0) {
-                    //document.getElementById("welcome-view").style.color = "black";
+
+                $("button[title='ACCOUNTS']").css("font-weight", "light");
                     return this.nonSelectedText;
                 }
                 else if (this.allSelectedText
@@ -246,18 +250,44 @@
                         && this.multiple) {
 
                     if (this.selectAllNumber) {
+
                         return this.allSelectedText + ' (' + options.length + ')';
                     }
                     else {
+
                         return this.allSelectedText;
                     }
+
                 }
                 else if (options.length > this.numberDisplayed) {
+                  if (this.nonSelectedText=='ACCOUNTS'){
+                  $("button[title='ACCOUNTS']").css("font-weight", "bold");
+                  //$("button[title='ACCOUNTS']").css("text-decoration", "underline");
+                }
+                else if (this.nonSelectedText=='RESEARCH'){
+$("button[title='RESEARCH']").css("font-weight", "bold");
+                }
+                else if (this.nonSelectedText=='CREATIVE'){
+$("button[title='CREATIVE']").css("font-weight", "bold");
+                }
+                else if (this.nonSelectedText=='DIGITAL'){
+$("button[title='DIGITAL']").css("font-weight", "bold");
+                }
+                else if (this.nonSelectedText=='MEDIA'){
+$("button[title='MEDIA']").css("font-weight", "bold");
+                }
+                else if (this.nonSelectedText=='ADMIN'){
+$("button[title='ADMIN']").css("font-weight", "bold");
+              }
+
+
                     return /*options.length + ' ' + */this.nSelectedText;
                 }
+
                 else {
-                    var selected = '';
-                    var delimiter = this.delimiterText;
+
+                    //var selected = '';
+                    //var delimiter = this.delimiterText;
 
                     options.each(function() {
                         var label = ($(this).attr('label') !== undefined) ? $(this).attr('label') : $(this).text();
@@ -265,6 +295,7 @@
                     });
 
                     return selected.substr(0, selected.length - 2);
+
                 }
             },
             /**
@@ -276,16 +307,36 @@
              */
             buttonTitle: function(options, select) {
                 if (options.length === 0) {
+                  if (this.nonSelectedText=='ACCOUNTS'){
+                  $("button[title='ACCOUNTS']").css("font-weight", "normal");
+                }
+                else if (this.nonSelectedText=='RESEARCH'){
+$("button[title='RESEARCH']").css("font-weight", "normal");
+                }
+                else if (this.nonSelectedText=='CREATIVE'){
+$("button[title='CREATIVE']").css("font-weight", "normal");
+                }
+                else if (this.nonSelectedText=='DIGITAL'){
+$("button[title='DIGITAL']").css("font-weight", "normal");
+                }
+                else if (this.nonSelectedText=='MEDIA'){
+$("button[title='MEDIA']").css("font-weight", "normal");
+                }
+                else if (this.nonSelectedText=='ADMIN'){
+$("button[title='ADMIN']").css("font-weight", "normal");
+              }
                     return this.nonSelectedText;
+
                 }
                 else {
-                    var selected = '';
-                    var delimiter = this.delimiterText;
+                    //var selected = '';
+                    //var delimiter = this.delimiterText;
 
                     options.each(function () {
                         var label = ($(this).attr('label') !== undefined) ? $(this).attr('label') : $(this).text();
                         selected += label + delimiter;
                     });
+
                     return selected.substr(0, selected.length - 2);
                 }
             },
@@ -395,7 +446,7 @@
             filterBehavior: 'text',
             includeFilterClearBtn: true,
             preventInputChangeEvent: false,
-
+            wa: '',
             SelectedText: '',
             n: 'selected',
             allSelectedText: '',
@@ -432,7 +483,10 @@
          * Builds the button of the multiselect.
          */
         buildButton: function() {
+            var wo='this.wa';
             this.$button = $(this.options.templates.button).addClass(this.options.buttonClass);
+            this.$button.attr('id', wo);
+            //this.$button = $(this.options.templates.button).addID(n);
             if (this.$select.attr('class') && this.options.inheritClass) {
                 this.$button.addClass(this.$select.attr('class'));
             }

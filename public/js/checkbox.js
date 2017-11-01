@@ -4,7 +4,7 @@ $(document).ready(function() {
         nonSelectedText:'ACCOUNTS',
         nSelectedText: 'ACCOUNTS',
         allSelectedText: 'ACCOUNTS',
-
+        wa:'YAHYAH',
         templates: { // Use the Awesome Bootstrap Checkbox structure
             li: '<li><div class="checkbox"><label></label></div></li>'
         }
