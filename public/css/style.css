@@ -143,7 +143,14 @@ strong {
 	display: inline-block;
 }
 
-
+@media screen and (min-width: 980px) {
+    p {
+        padding-left: 10%;
+        padding-right: 10%;
+        
+        margin-bottom: 0px !important;
+    }
+}
 label {
 	text-align: left;
 	padding: 5px;
