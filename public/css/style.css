@@ -74,6 +74,11 @@ input[type=checkbox] + label:before {
     letter-spacing: 7.3px;
 }
 
+.no-padding {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
 
  .mainController {
    padding-top: 42px;
