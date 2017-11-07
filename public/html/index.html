@@ -201,7 +201,7 @@
 
       <div id="card-view" class="container text-center">
         <div class="row no-gutters">
-          <div class="col-xs-6 col-sm-4 col-lg-3 colanimate fadeIn team-box no-padding" style="height: auto;" ng-repeat="student in students">
+          <div class="col-xs-6 col-sm-4 col-lg-3 colanimate fadeIn team-box no-padding" style="height: auto;" ng-repeat="student in students | orderBy:'name'">
             <div class="wrapper">
               <div class="corner-ribbon top-right sticky red shadow" ng-show='student.isHired == true'><strong>HIRED</strong></div>
               <span class="member-details" >
@@ -263,29 +263,31 @@
 
   <!---JAVASCRIPT LIBRARIES-->
   <script src="../js/checkbox.js"></script>
+	<script>
+		$(document).ready(function() {
+			checked_skills = [];
+			checked_skills.push('shando');
+
+			$('#multiple-checkboxes1').change( function () {
+
+					checked_skills.push($('option:checked').val());
+					fuck = jQuery.inArray( "$('option:not(:checked)').val()", checked_skills);
+
+			if (jQuery.inArray( "$('option:not(:checked)').val()", checked_skills) != -1){
+				alert('removing item');
+				checked_skills.splice($.inArray($('option:not(:checked)').val(), checked_skills),1);
+			}
+
+			});
+
+		});
+	</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
   <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
   <script src="../js/app.js"></script>
   <script src="../js/controllers/main.controller.js"></script>
   <script src="../js/controllers/filter.controller.js"></script>
   <script src="../js/services/student.service.js"></script>
-	<script src="../js/filters/name.filter.js"></script>
-	<script>
-
-			$(document).scroll(function () {
-				var $nav = $(".navbar-fixed-top");
-				$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-			});
-		
-		/*
-		
-			$("option").on("click", function() {
-				alert('checked');
-				checked_skills.add($("option:checked").val());
-			});*/
-
-	</script>
-
 
 </body>
 </div>
