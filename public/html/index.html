@@ -62,7 +62,7 @@
                               <li class="nav-item">
                                   <a class="nav-link" href="#blog">Blog</a>
                               </li>
-  				<li class="nav-item">
+  				                    <li class="nav-item">
                                   <a class="nav-link" href="#talent">Talent</a>
                               </li>
                               <li class="nav-item">
@@ -201,45 +201,45 @@
 
       <div id="card-view" class="container text-center">
         <div class="row no-gutters">
-          <div class="col-xs-6 col-sm-4 col-lg-3 colanimate fadeIn team-box no-padding" style="height: auto;" ng-repeat="senior in seniors as filteredSeniors">
+          <div class="col-xs-6 col-sm-4 col-lg-3 colanimate fadeIn team-box no-padding" style="height: auto;" ng-repeat="student in students">
             <div class="wrapper">
-              <div class="corner-ribbon top-right sticky red shadow" ng-show='senior.isHired == true'><strong>HIRED</strong></div>
+              <div class="corner-ribbon top-right sticky red shadow" ng-show='student.isHired == true'><strong>HIRED</strong></div>
               <span class="member-details" >
 
-                <h5>{{ senior.name }}</h5>
-                <h3>{{ senior.position }}</h3>
+                <h5>{{ student.name }}</h5>
+                <h3>{{ student.positions[0] }}</h3>
                 <div class="strip"></div>
-                <p class='desc'>{{ senior.description }}</p>
+                <p class='desc'>{{ student.personal_statement }}</p>
                 <div class='icons'>
 
                   <!--FACEBOOK-->
-                  <a href="{{ senior.facebook }}" target="_blank" ng-hide='senior.facebook == ""'>
+                  <a href="{{ student.profile_links.facebook }}" target="_blank" ng-hide='student.profile_links.facebook == ""'>
                     <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
                   </a>
 
                   <!--LINKEDIN-->
-                  <a href="{{ senior.linkedin }}" target="_blank" ng-hide='senior.linkedin == ""'>
+                  <a href="{{ student.profile_links.linkedin_url }}" target="_blank" ng-hide='student.profile_links.linkedin_url == ""'>
                     <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
                   </a>
 
                   <!--TWITTER-->
-                  <a href="{{ senior.twitter }}" target="_blank" ng-hide='senior.twitter == ""'>
+                  <a href="{{ student.profile_links.twitter }}" target="_blank" ng-hide='student.profile_links.twitter == ""'>
                     <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
                   </a>
 
                   <!--PERSONAL WEBSITE-->
-                  <a href="{{ senior.personalSite1 }}" target="_blank" ng-hide='senior.personalSite1 == ""'>
+                  <a href="{{ student.profile_links.personal_website }}" target="_blank" ng-hide='student.profile_links.personal_website == ""'>
                     <i class="fa fa-globe fa-2x" aria-hidden="true"></i>
                   </a>
 
                   <!--RESUME-->
-                  <a href="{{ senior.resume }}" target="_blank" ng-hide='senior.resume == ""' >
+                  <a href="{{ student.profile_links.resume_link }}" target="_blank" ng-hide='student.profile_links.resume_link == ""' >
                     <i class="fa fa-file-o fa-2x" aria-hidden="true"></i>
                   </a>
 
                 </div>
               </span>
-              <img class="img-responsive senior" ng-src="{{ senior.headshot }}" width="300px" height="auto;" alt="senior-picture" data-toggle="modal" data-target="#myModal" alt="Agency headshot"/>
+              <img class="img-responsive student" ng-src="{{ student.head_shot }}" width="300px" height="auto;" alt="student-picture" data-toggle="modal" data-target="#myModal" alt="Agency headshot"/>
             </div>
           </div>
 
@@ -268,7 +268,7 @@
   <script src="../js/app.js"></script>
   <script src="../js/controllers/main.controller.js"></script>
   <script src="../js/controllers/filter.controller.js"></script>
-  <script src="../js/services/senior.service.js"></script>
+  <script src="../js/services/student.service.js"></script>
 	<script src="../js/filters/name.filter.js"></script>
 	<script>
 
@@ -276,9 +276,16 @@
 				var $nav = $(".navbar-fixed-top");
 				$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
 			});
+		
+		/*
+		
+			$("option").on("click", function() {
+				alert('checked');
+				checked_skills.add($("option:checked").val());
+			});*/
 
 	</script>
-  
+
 
 </body>
 </div>

@@ -1,27 +1,28 @@
 var express = require('express');
 var router = express.Router();
-var Senior = require("../models/senior.model.js");
+var Student = require("../models/student.model.js");
 
 var bodyParser = require('body-parser');
 
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({extended: true}));
 
-router.get('/seniors', function(req, res){
-  Senior.find({}, function(err, foundSeniors){
+router.get('/students', function(req, res){
+  Student.find({}, function(err, foundStudents){
     if(err){
       res.status(500).json({
         err: err
       });
     }
     res.status(200).json({
-      seniors: foundSeniors
+      students: foundStudents
     });
   });
 });
 
-router.get('/seniors/:position', function(req, res){
-  Senior.find({ name: req.params.position }, function(err, foundMember){
+
+router.get('/students/:position', function(req, res){
+  Student.find({ name: req.params.position }, function(err, foundMember){
     if(err){
       res.status(500).json({
         err: err
@@ -33,10 +34,10 @@ router.get('/seniors/:position', function(req, res){
   });
 });
 
-router.post('/seniors', function(req, res){
+router.post('/students', function(req, res){
   console.log(req.body);
-  var senior = new Senior(req.body);
-  senior.save(function(err){
+  var student = new Student(req.body);
+  student.save(function(err){
     if(err){
       res.status(500).json({
         err: err
@@ -47,27 +48,27 @@ router.post('/seniors', function(req, res){
     });
   });
 });
-router.put('/seniors/:id', function(req, res){
-  Senior.findOneAndUpdate({_id: req.params.id}, req.body, function(err, oldSenior){
+router.put('/students/:id', function(req, res){
+  Student.findOneAndUpdate({_id: req.params.id}, req.body, function(err, oldStudent){
     if(err){
       res.status(500).json({
         err: err
       });
     }
     res.status(200).json({
-      msg: oldSenior
+      msg: oldStudent
     });
   });
 });
-router.delete('/seniors/:id', function(req, res){
-  Senior.findOneAndRemove({_id: req.params.id}, function(err, deletedSenior){
+router.delete('/students/:id', function(req, res){
+  Student.findOneAndRemove({_id: req.params.id}, function(err, deletedStudent){
     if(err){
       res.status(500).json({
         err: err
       });
     }
     res.status(200).json({
-      msg: deletedSenior
+      msg: deletedStudent
     });
   });
 });

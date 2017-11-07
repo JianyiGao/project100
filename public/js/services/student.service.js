@@ -9,10 +9,10 @@
     var students = [];
 
     return {
-      get: getAllstudents,
-      create: createOnestudent,
-      update: updateOnestudent,
-      delete: deleteOnestudent
+      get: getAllStudents,
+      create: createOneStudent,
+      update: updateOneStudent,
+      delete: deleteOneStudent
     };
 
     function init(){ // this is going to make our first data request upon file load
@@ -25,11 +25,11 @@
       });
     }
 
-    function getAllstudents(){
+    function getAllStudents(){
       return students;
     }
 
-    function createOnestudent(student){
+    function createOneStudent(student){
       $http.post('/students', student)
       .then(function(response){
         students.push(student);
@@ -39,17 +39,17 @@
       });
     }
 
-    function updateOnestudent(index, updatedstudent){
-      $http.put('/students/', updatedstudent._id, updatedstudent)
+    function updateOneStudent(index, updatedStudent){
+      $http.put('/students/', updatedStudent._id, updatedStudent)
             .then(function(response){
-              students.splice(index, 1, updatedstudent);
+              students.splice(index, 1, updatedStudent);
             })
             .catch(function(){
               console.log(err);
             });
     }
-    function deleteOnestudent(index, deletedstudent){
-      $http.delete('/students/', deletedstudent._id)
+    function deleteOneStudent(index, deletedStudent){
+      $http.delete('/students/', deletedStudent._id)
           .then(function(){
             students.splice(index, 1);
           })

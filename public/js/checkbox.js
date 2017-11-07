@@ -81,4 +81,14 @@ $(document).ready(function() {
         });
 
     });
+	
+	checked_skills = [];
+	checked_skills.push('shando');
+	
+	$(document).scroll(function () {
+		var $nav = $(".navbar-fixed-top");
+		$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+	});
+	
+	
 });

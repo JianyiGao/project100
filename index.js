@@ -1,6 +1,6 @@
 var express = require('express');
 var server = express();
-var seniorRouter = require('./server/routers/senior.router.js');
+var seniorRouter = require('./server/routers/student.router.js');
 var mongoose = require('mongoose');
 var mongoURI = process.env.MONGOURI || require('./config.js').mongoURI;
 mongoose.connect(mongoURI);
