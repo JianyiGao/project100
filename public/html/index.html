@@ -99,7 +99,7 @@
             <div class="row">
               <div class="col-xs-2">
 								<!--ACCOUNTS-->
-                <select id="multiple-checkboxes1" multiple="multiple">
+                <select multiple="multiple" multiselect type="ACCOUNTS">
                   <option value="account-management">Account Management</option>
                   <option value="client-facing experience">Client-Facing Experience</option>
 									<option value="report-writing">Public Speaking</option>
@@ -111,7 +111,7 @@
               </div>
               <div class="col-xs-2">
 								<!--RESEARCH-->
-                <select id="multiple-checkboxes2" multiple="multiple">
+                <select multiple="multiple" multiselect type="RESEARCH">
                   <option value="coding-qualitative-data">Coding Qualitative Data</option>
                   <option value="ethical-consumer-research">Ethical Consumer Research (IRB)</option>
                   <option value="focus-group">Focus Groups/Discussion Forums</option>
@@ -128,7 +128,7 @@
               </div>
               <div class="col-xs-2">
 								<!--CREATIVE-->
-                <select id="multiple-checkboxes3" multiple="multiple">
+                <select multiple="multiple" multiselect type="CREATIVE">
                   <option value="art-direction">Art Direction</option>
                   <option value="copywriting">Copywriting</option>
                   <option value="graphic-design">Graphic Design</option>
@@ -143,7 +143,7 @@
               </div>
               <div class="col-xs-2">
 								<!--DIGITAL-->
-                <select id="multiple-checkboxes4" multiple="multiple">
+                <select multiple="multiple" multiselect type="DIGITAL">
                   <option value="back-end-web-development">Back End Web Development</option>
 									<option value="culture-engagement-coordinator">Culture and Engagement Coordination</option>
                   <option value="front-end-web-development">Front End Web Development</option>
@@ -156,7 +156,7 @@
               </div>
               <div class="col-xs-2">
 								<!--MEDIA-->
-                <select id="multiple-checkboxes5" multiple="multiple">
+                <select multiple="multiple" multiselect type="MEDIA">
                   <option value="adobe-creative-suite">Adobe Creative Suite</option>
                   <option value="analytics">Analytics</option>
                   <option value="brand-development">Brand Development</option>
@@ -181,7 +181,8 @@
                 </select>
               </div>
               <div class="col-xs-2">
-                <select id="multiple-checkboxes6" multiple="multiple">
+								<!--ADMIN-->
+                <select multiple="multiple" multiselect type="ADMIN">
                   <option value="adobe-creative-suite">Adobe Creative Suite</option>
                   <option value="collaboration">Collaboration</option>
                   <option value="diversity-skills">Diversity Skills</option>
@@ -199,7 +200,7 @@
 
       <div id="card-view" class="container text-center">
         <div class="row no-gutters">
-          <div class="col-xs-6 col-sm-4 col-lg-3 colanimate fadeIn team-box no-padding" style="height: auto;" ng-repeat="student in students | orderBy:'name'">
+          <div class="col-xs-6 col-sm-4 col-lg-3 colanimate fadeIn team-box no-padding" style="height: auto;" ng-if="student.isSelected" ng-repeat="student in students | orderBy:'name'">
             <div class="wrapper">
               <div class="corner-ribbon top-right sticky red shadow" ng-show='student.isHired == true'><strong>HIRED</strong></div>
               <span class="member-details" >

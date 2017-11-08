@@ -19,6 +19,8 @@
       $http.get('/students')
       .then(function(response){
         students = response.data.students;
+        for (var i = 0; i < students.length; ++i)
+          students[i].isSelected = true;
       })
       .catch(function(err){
         console.log(err);
