@@ -55,11 +55,11 @@
           if (skills.includes(student.skills[i].replace(/\s+/g, '-').toLowerCase())) student.isSelected = true;
         return student;
       });
-      if ($scope.students.filter(student => student.isSelected).length <= 0)
-        $scope.students = $scope.students.map(student => {
-          student.isSelected = true;
-          return student;
-        });
+      // if ($scope.students.filter(student => student.isSelected).length <= 0)
+      //   $scope.students = $scope.students.map(student => {
+      //     student.isSelected = true;
+      //     return student;
+      //   });
       $scope.$apply();
     });
   }
