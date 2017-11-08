@@ -2,46 +2,38 @@
   angular.module('Project100')
         .controller('MainController', MainController);
 
-MainController.$inject = ['$scope', 'SeniorService'];
+MainController.$inject = ['$scope', 'StudentService'];
 
-function MainController($scope, SeniorService){
-  $scope.seniors = SeniorService.get();
-  $scope.createSenior = createSenior;
-  $scope.deleteSenior = deleteSenior;
-  $scope.editSenior = editSenior;
-  $scope.saveSenior = saveSenior;
-
+function MainController($scope, StudentService){
+  $scope.students = StudentService.get();
+  $scope.createStudent = createStudent;
+  $scope.deleteStudent = deleteStudent;
+  $scope.editStudent = editStudent;
+  $scope.saveStudent = saveStudent;
 
   $scope.$watch(function(){
-     return SeniorService.get();
+     return StudentService.get();
    }, function(){
-     $scope.seniors = SeniorService.get();
+     $scope.students = StudentService.get();
    });
-  function createSenior(newSenior){
-    SeniorService.create(newSenior);
-    $scope.newSenior = '';
-  }
-  function deleteSenior(index, senior){
-    SeniorService.delete(index, senior);
-  }
-  function editSenior(senior){
-    senior.isBeingEdited = true;
-  }
-  function saveSenior(index, senior){
-    SeniorService.update(index, senior);
-    senior.isBeingEdited = false;
+
+  function createStudent(newStudent){
+    StudentService.create(newStudent);
+    $scope.newStudent = '';
   }
 
+  function deleteStudent(index, student){
+    StudentService.delete(index, student);
+  }
 
+  function editStudent(student){
+    student.isBeingEdited = true;
+  }
 
-
-  // $('.grid').masonry({
-  //   // options
-  //   itemSelector: '.grid-item',
-  //   columnWidth: 200
-  // });
-
-
+  function saveStudent(index, student){
+    StudentService.update(index, student);
+    student.isBeingEdited = false;
+  }
 
   }
 

@@ -1068,6 +1068,7 @@ fieldset[disabled] .form-control {
 
 .radio,
 .checkbox {
+  border-radius: 250px;
   position: relative;
   display: block;
   margin-bottom: .75rem;
@@ -1075,6 +1076,7 @@ fieldset[disabled] .form-control {
 
 .radio label,
 .checkbox label {
+  border-radius: 250px;
   padding-left: 1.25rem;
   margin-bottom: 0;
   font-weight: normal;
@@ -1093,6 +1095,7 @@ fieldset[disabled] .form-control {
   position: absolute;
   margin-top: .25rem;
   margin-left: -1.25rem;
+  border-radius: 250px;
 }
 
 .radio + .radio,
